@@ -1,0 +1,21 @@
+body {
+    margin: 50px;
+}
+
+h1 {
+    font-family: 'Roboto', sans-serif;
+    text-decoration: underline;
+}
+
+
+.foxbox{
+    font-size: 36px;
+    font-family: 'Roboto', sans-serif;
+    color: #085569;
+    margin: 15px;
+    padding: 20px 40px 70px 15px;
+    border: 5px solid #80CD96;
+    width: 315px;
+    heigth: 95px;
+    background-color: #1C91A0;
+}

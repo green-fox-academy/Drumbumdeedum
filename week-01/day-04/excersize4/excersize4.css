@@ -1,0 +1,19 @@
+body {
+    margin: 50px;
+}
+
+h1, h2 {
+    font-family: 'Roboto', sans-serif;
+}
+
+h2 {
+    color: #F1AB1C;
+}
+
+.texttag, .textparagraph {
+    margin: 0;
+    padding: 0;
+}
+
+.textparagraph {
+    text-indent: 17px;

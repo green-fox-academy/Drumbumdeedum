@@ -1,0 +1,23 @@
+body {
+  margin: 50px;
+}
+
+p {
+  font-size: 18px;
+  width: 300px;
+  heigth: auto;
+  border: 3px solid black;
+  border-top: 0px;
+  border-collapse: collapse;
+  padding: 15px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+p:hover {
+  background-color: #EC6842;
+}
+
+div p:last-child {
+  border-bottom: 0px;
+}

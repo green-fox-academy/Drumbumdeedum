@@ -1,0 +1,32 @@
+body {
+  margin: 50px;
+}
+
+p {
+  font-family: courier;
+  text-align: center;
+  color: rgba(255,255,255,.7);
+  padding: 15px 35px 15px 35px;
+  width: 180px;
+  background-image:url(https://github.com/greenfox-academy/teaching-materials/blob/master/html-css/basics/css-selectors-attributes/duck.png?raw=true);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.duck01 {
+  background-color: rgba(253,100,78,1);
+  background-position: left center;
+  background-size: 4em;
+}
+
+.duck02 {
+  background-color: rgba(99,56,120,1);
+  background-position: center center;
+  background-size: 10em;
+}
+
+.duck03 {
+  background-color: rgba(128,128,128,1);
+  background-position: bottom right;
+  background-size: 4em;
+}

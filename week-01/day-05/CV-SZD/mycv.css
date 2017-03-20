@@ -1,0 +1,66 @@
+header {
+  font-family: 'Anton', sans-serif;
+  margin: 0px 500px 0px 500px;
+  text-align: center;
+  background-color: #5B96A9;
+}
+
+header > h1 {
+  margin-top:0px;
+  padding-top:0px;
+  margin-bottom:30px;
+  padding-bottom:20px;
+  font-size: 48px;
+  line-height: 54px;
+}
+
+header > h2 {
+  margin-bottom:0px;
+  padding-bottom:0px;
+  margin-top:30px;
+  padding-top:20px;
+  font-size: 30px;
+  line-height: 34px;
+}
+
+body {
+  background-color:#D1D1D1;
+}
+
+article {
+
+  font-family: 'Cabin', sans-serif;
+  margin: 0px 445px 0px 445px;
+}
+
+h1 {
+  margin-bottom: 0px;
+}
+
+h2, p, ul {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+#education, #language-skills{
+  padding: 10px 20px 20px 20px;
+  background-color: #3A9FBF;
+}
+
+p, ul, li{
+  color: white;
+}
+
+h1, h2, .maintitle {
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+hr {
+  height: 2px;
+  background-color: black;
+}
+
+.maintitle {
+  font-size: 20px;
+}

@@ -1,0 +1,98 @@
+/* Header and hgroup h1-h6 elements. */
+
+header {
+  background-image: url(https://github.com/greenfox-academy/teaching-materials/blob/master/html-css/basics/project-cv/workshop/anakin.png?raw=true);
+  width: 1280px;
+  height: 410px;
+  padding: 0px;
+  border: 0px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: 0px 100px 0px 100px;
+}
+
+header {
+  font-family: 'Days One', sans-serif;
+}
+
+h1 {
+  font-size: 60px;
+  padding: 0px 0px 0px 320px;
+  margin: 0px;
+}
+
+h2 {
+  padding: 260px 0px 0px 320px;
+  margin-bottom: 0px;
+}
+
+h3 {
+  font-size: 30px;
+  margin-bottom: 0px;
+}
+
+h4 {
+  font-size: 23px;
+  margin: 0px;
+  font-weight: 500px;
+}
+
+h5 {
+  font-size: 18px;
+  margin: 0px;
+}
+
+/* Main parts of the article.*/
+
+body {
+  font-family: 'Exo 2', sans-serif;
+}
+
+article {
+  margin: 0px 364px 364px 364px;
+  width: 715px;
+  line-height: 35px;
+}
+
+p {
+  line-heigth: 1em;
+}
+
+strong {
+  font-weight: bolder;
+}
+
+blockquote {
+  display: block;
+  margin: 0px -60px 10px -40px;
+  background-color: #444444;
+  font-size: 48px;
+  color: rgb(255, 255, 255);
+  padding: 36px 40px 36px 40px;
+  line-height: 50px;
+}
+
+hr {
+  height: 3px;
+  background-color: black;
+}
+
+/* Groups and ID's. */
+
+.short-intro {
+  font-size
+}
+
+.list {
+  margin-bottom: 50px;
+}
+
+.main-title {
+  text-transform: uppercase;
+  margin-bottom: 60px;
+}
+
+.achievments, .experience .training .interests {
+  margin-top: 70px;
+  margin-bottom: 70px;
+}

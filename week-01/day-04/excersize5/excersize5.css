@@ -1,0 +1,34 @@
+body {
+    margin: 50px;
+}
+
+h1 {
+    color: blue;
+}
+
+h2 {
+    color:#F1AB1C;
+}
+
+.ex {
+    color:#000000;
+}
+
+ul {
+    list-style: square;
+    color:#0106DA;
+}
+
+ol {
+    color:#000000;
+}
+
+.fruitlist {
+    color:#000000;
+    list-style: disc;
+}
+
+.apple {
+    color:#ff0000;
+    list-style: disc;
+}

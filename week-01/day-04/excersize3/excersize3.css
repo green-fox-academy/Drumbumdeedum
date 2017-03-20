@@ -1,0 +1,42 @@
+body {
+    margin: 50px;
+}
+
+h1 {
+    font-family: 'Roboto', sans-serif;
+    text-decoration: underline;
+}
+
+.Northbox1, .Northbox2, .Southbox1, .Southbox2 {
+    font-size: 36px;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    color: white;
+    margin-left: 15px;
+    margin-right: 15px;
+    padding: 45px 0px 45px 0px;
+    border: 16px solid #4688F1;
+    width:350px;
+    heigth:130;
+    background-color: blue;
+}
+
+.Northbox1, .Northbox2 {
+    background-color:#E67676;
+}
+
+.Southbox1, .Southbox2 {
+    background-color:#A9E6E6;
+}
+
+.Southbox1, .Northbox1 {
+    margin-top: 10px;
+    margin-bottom: 0px;
+    border-bottom: 0px;
+}
+
+.Northbox2, .Southbox2 {
+    margin-top: 0px;
+    margin-bottom: 10px;
+    border-top: 0px;
+}

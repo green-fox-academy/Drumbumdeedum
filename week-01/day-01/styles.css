@@ -1,0 +1,87 @@
+body {
+    margin: 0;
+    color: rgba(0,0,0,.8);
+    font-family: 'Fira Sans', sans-serif;
+;
+}
+
+img {
+    width: 100%;
+}
+
+/*
+comment, comment, comment, this will not change the webpage in any way
+*/
+
+article {
+    width: 740px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1, h2, h3 {
+    text-align:center;
+}
+
+h1 {
+    margin-top: 80px;
+    margin-bottom: 3px;
+    font-size: 37px;
+}
+
+h2 {
+    margin-top: 0px;
+    margin-bottom: 23px;
+    margin-right: 40px;
+    margin-left: 40px;
+    line-height: 1.5;
+    color: rgba(0,0,0,.4);
+    font-weight: 400;
+    font-size: 23px;
+}
+
+h3 {
+    margin-right: 40px;
+    margin-left: 40px;
+    font-size: 22px;
+    letter-spacing: 18px;
+    font-weight: 300;
+}
+
+.p1 {
+    text-align: left;
+    margin-left:20px;
+    margin-right:20px;
+    margin-bottom: 29px;
+    margin-top: 0;
+    line-height: 1.5;
+    font-family: serif;
+    font-size: 22px;
+    font-weight: lighter;
+    font-style: italic;
+}
+
+.p2 {
+    text-align: left;
+    margin-left:20px;
+    margin-right:20px;
+    margin-bottom: 29px;
+    margin-top: 0;
+    line-height: 1.5;
+    font-family: serif;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.p3 {
+    text-align: left;
+    margin-left:20px;
+    margin-right:20px;
+    margin-bottom: 29px;
+    margin-top: 0;
+    line-height: 1.5;
+    font-family: serif;
+    font-size: 22px;
+    font-weight: lighter;
+    font-style: normal;
+}
