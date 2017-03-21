@@ -15,29 +15,5 @@ public class NumberGuesser {
         gotANumber = true;
       }
     }
-    int lowerGuessed = 0;
-    int higherGuessed = 200;
-    int guessed = 100;
-    boolean foundTheNumber = false;
-    while (!foundTheNumber) {
-        System.out.println("Is this your number: " + guessed + "? (Say \"yes\" or \"no\".)");
-        Scanner scanner = new Scanner(System.in);
-        String userInput = scanner.nextLine();
-        if ("yes".equals(userInput)) {
-          foundTheNumber = true;
-        } else {
-          System.out.println("Is it bigger? (Say \"yes\" or \"no\".)");
-          Scanner scanner = new Scanner(System.in);
-          String userInput = scanner.nextLine();
-        }
-        if ("yes".equals(userInput)) {
-          lowerGuessed = guessed;
-          guessed += (higherGuessed - lowerGuessed) / 2;
-        } else {
-          higherGuessed = guessed;
-          guessed -= (higherGuessed - lowerGuessed) / 2;
-        }
-    }
-    System.out.println("Cool, your number is" + guessed + "!");
   }
 }
