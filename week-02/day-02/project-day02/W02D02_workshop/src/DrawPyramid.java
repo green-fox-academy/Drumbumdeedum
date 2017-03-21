@@ -23,7 +23,10 @@ public class DrawPyramid {
     String star = "*";
     String empty = " ";
     while (a <= userInt) {
-      System.out.println((new String(new char[userInt-a]).replace("\0", empty))+(new String(new char[a]).replace("\0", star))+(new String(new char[a-1]).replace("\0", star)));
+      System.out.println(
+              (new String(new char[userInt-a]).replace("\0", empty))
+              +(new String(new char[a]).replace("\0", star))
+              +(new String(new char[a-1]).replace("\0", star)));
       a +=1;
     }
   }
