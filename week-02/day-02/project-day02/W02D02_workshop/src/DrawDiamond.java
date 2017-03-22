@@ -22,10 +22,10 @@ public class DrawDiamond {
     a = 1;
     while (a <= userInt /2) {
       System.out.println(
-              (new String(new char[a]).replace("\0", empty)) +
-              (new String(new char[(userInt+1)/2-a]).replace("\0", star)) +
-              (new String(new char[userInt / 2 - a]).replace("\0", star))
-              );
+        (new String(new char[a]).replace("\0", empty)) +
+        (new String(new char[(userInt+1)/2-a]).replace("\0", star)) +
+        (new String(new char[userInt / 2 - a]).replace("\0", star))
+        );
       a += 1;
     }
   }
