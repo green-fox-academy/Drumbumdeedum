@@ -9,21 +9,18 @@
 //   `"orange red", "red", "tomato"`
 // - In `colors[2]` store the shades of pink:
 //   `"orchid", "violet", "pink", "hot pink"`
+import java.util.Arrays;
 
 public class Colors {
   public static void main(String[] args) {
+    String[][] colors = {
+      {"lime", "forest green", "olive", "pale green", "spring green"},
+      {"orange red", "red", "tomato"},
+      {"orchid", "violet", "pink", "hot pink"}
+    };
 
-    // String [][] colors = new String[3][];
-
-    // String greens [] = {"lime", "forest green", "olive", "pale green", "spring green"};
-    // String reds [] = {"orange red", "red", "tomato"};
-    // String pinks [] = {"orchid", "violet", "pink", "hot", "pink"};
-
-    //for (int x = 0; x < 3; x++) {
-     // for (int y = 0; y < colors[y].length; y++) {
-    //  }
-     // System.out.println();
-    //}
-
+    System.out.println(Arrays.toString(colors[0]));
+    System.out.println(Arrays.toString(colors[1]));
+    System.out.println(Arrays.toString(colors[2]));
   }
 }
