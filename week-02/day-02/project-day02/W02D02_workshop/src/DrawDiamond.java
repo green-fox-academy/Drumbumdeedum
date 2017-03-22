@@ -1,6 +1,19 @@
 /**
  * Created by danielszalay on 2017. 03. 21..
  */
+// Write a program that reads a number from the standard input, then draws a
+// diamond like this:
+//
+//
+//    *
+//   ***
+//  *****
+// *******
+//  *****
+//   ***
+//    *
+//
+// The diamond should have as many lines as the number was
 
 import java.util.Scanner;
 
@@ -14,9 +27,9 @@ public class DrawDiamond {
     String empty = " ";
     while (a <= userInt / 2 + 1) {
       System.out.println(
-              (new String(new char[(userInt+1)/2-a]).replace("\0", empty)) +
-              (new String(new char[a]).replace("\0", star)) +
-              (new String(new char[a-1]).replace("\0", star)));
+        (new String(new char[(userInt+1)/2-a]).replace("\0", empty)) +
+        (new String(new char[a]).replace("\0", star)) +
+        (new String(new char[a-1]).replace("\0", star)));
       a +=1;
     }
     a = 1;

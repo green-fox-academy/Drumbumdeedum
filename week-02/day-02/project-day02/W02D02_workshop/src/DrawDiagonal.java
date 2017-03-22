@@ -26,11 +26,11 @@ public class DrawDiagonal {
     System.out.println(new String(new char[userInt]).replace("\0", "*"));
     while (a <= userInt-2) {
       System.out.println(
-              ("*") +
-              (new String(new char[a-1]).replace("\0", " ")) +
-              ("*") +
-              (new String(new char[userInt - 2 - a]).replace("\0", " ")) +
-              ("*"));
+        ("*") +
+        (new String(new char[a-1]).replace("\0", " ")) +
+        ("*") +
+        (new String(new char[userInt - 2 - a]).replace("\0", " ")) +
+        ("*"));
       a += 1;
     }
     System.out.println(new String(new char[userInt]).replace("\0", "*"));
