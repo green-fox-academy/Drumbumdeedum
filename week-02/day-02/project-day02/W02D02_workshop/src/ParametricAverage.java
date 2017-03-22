@@ -12,7 +12,7 @@ import java.util.Scanner;
 
 public class ParametricAverage {
   public static void main(String[] args) {
-    int random = (int)(Math.random()* 15 + 5);
+    int random = (int)(Math.random()* 10 + 5);
     int a = random;
     int total = 0;
     int userInt = 0;
