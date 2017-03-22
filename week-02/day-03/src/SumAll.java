@@ -18,3 +18,4 @@ public class SumAll {
     System.out.println("The sum of the elements in ai equals: " + sum);
   }
 }
+

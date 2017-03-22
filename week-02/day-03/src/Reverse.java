@@ -12,15 +12,15 @@ import java.util.Arrays;
 public class Reverse {
   public static void main(String[] args) {
     int[] aj = {3, 4, 5, 6, 7};
-    int[] temp = {0, 0, 0, 0, 0};
+    int[] reverse_aj = {0, 0, 0, 0, 0};
 
     String reversed = "";
 
     for (int x = aj.length-1; x >= 0 ; x--) {
-      temp[temp.length-x-1] = aj[x];
+      reverse_aj[reverse_aj.length-x-1] = aj[x];
     }
 
     System.out.println(reversed);
-    System.out.println(Arrays.toString(temp));
+    System.out.println(Arrays.toString(reverse_aj));
   }
 }
