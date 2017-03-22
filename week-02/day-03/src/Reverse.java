@@ -14,13 +14,9 @@ public class Reverse {
     int[] aj = {3, 4, 5, 6, 7};
     int[] reverse_aj = {0, 0, 0, 0, 0};
 
-    String reversed = "";
-
     for (int x = aj.length-1; x >= 0 ; x--) {
       reverse_aj[reverse_aj.length-x-1] = aj[x];
     }
-
-    System.out.println(reversed);
     System.out.println(Arrays.toString(reverse_aj));
   }
 }

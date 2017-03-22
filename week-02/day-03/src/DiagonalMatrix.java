@@ -15,7 +15,7 @@ public class DiagonalMatrix {
   public static void main(String[] args) {
 
     int size = 8;
-    int [][] matrix = new int [size][size];
+    int[][] matrix = new int [size][size];
 
     for (int x = 0; x < size; x++) {
       for (int y = 0; y < size; y++) {

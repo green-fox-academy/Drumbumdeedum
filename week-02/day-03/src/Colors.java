@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 /**
  * Created by danielszalay on 2017. 03. 22..
  */
@@ -9,7 +11,6 @@
 //   `"orange red", "red", "tomato"`
 // - In `colors[2]` store the shades of pink:
 //   `"orchid", "violet", "pink", "hot pink"`
-import java.util.Arrays;
 
 public class Colors {
   public static void main(String[] args) {

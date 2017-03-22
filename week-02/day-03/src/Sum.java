@@ -9,14 +9,13 @@
 
 public class Sum {
   public static void main(String[] args) {
+    int maxValue = 6;
     System.out.println(sum(maxValue));
   }
 
-  static int maxValue = 5;
-
   public static int sum(int value) {
     int sumValue = 0;
-    for (int a = 0; a <= value;  a++) {
+    for (int a = 0; a <= value; a++) {
       sumValue += a;
     }
     return sumValue;

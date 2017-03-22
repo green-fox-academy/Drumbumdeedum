@@ -6,6 +6,7 @@
 // - Print the result of `doubling(ak)`
 
 public class Doubling {
+
   static int ak = 123;
 
   public static void main(String[] args) {
