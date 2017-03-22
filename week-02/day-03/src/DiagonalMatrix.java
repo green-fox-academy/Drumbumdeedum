@@ -10,7 +10,6 @@
 //   0 0 0 1
 //
 // - Print this two dimensional array to the output
-import java.util.Scanner;
 
 public class DiagonalMatrix {
   public static void main(String[] args) {
