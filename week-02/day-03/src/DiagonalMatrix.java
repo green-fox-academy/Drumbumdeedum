@@ -15,7 +15,6 @@ import java.util.Scanner;
 public class DiagonalMatrix {
   public static void main(String[] args) {
 
-
     int size = 8;
     int [][] matrix = new int [size][size];
 
