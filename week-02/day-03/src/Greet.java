@@ -10,7 +10,6 @@
 // - Greet `al`
 
 public class Greet {
-
   public static void main(String[] args) {
     System.out.println(greet(al));
   }

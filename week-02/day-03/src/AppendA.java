@@ -10,7 +10,6 @@
 // - Print the result of `appendA(am)`
 
 public class AppendA {
-
   public static void main(String[] args) {
     System.out.println(appendA(am));
   }
