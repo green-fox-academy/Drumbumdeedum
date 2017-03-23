@@ -1,11 +1,9 @@
-import java.util.*;
-
 /**
  * Created by danielszalay on 2017. 03. 23..
  */
 // Join the two lists by matching one girl with one boy in the order list
 // Exepected output: "Eve", "Joe", "Ashley", "Fred"...
-
+import java.util.*;
 
 public class Matchmaking{
   public static void main(String... args){

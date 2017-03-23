@@ -1,11 +1,10 @@
-import java.util.*;
-
 /**
  * Created by danielszalay on 2017. 03. 23..
  */
 // Accidentally we added "2" and "false" to the list.
 // Your task is to change from "2" to "Croissant" and change from "false" to "Ice cream"
 // No, don't just remove the lines
+import java.util.*;
 
 public class Candyshop{
   public static void main(String... args){

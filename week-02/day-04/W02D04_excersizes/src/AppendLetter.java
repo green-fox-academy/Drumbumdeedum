@@ -1,10 +1,9 @@
-import com.sun.tools.doclets.formats.html.SourceToHTMLConverter;
-import java.util.*;
-
 /**
  * Created by danielszalay on 2017. 03. 23..
  */
 // Add "a" to every string in the far list.
+import java.util.*;
+
 
 public class AppendLetter{
   public static void main(String... args){
