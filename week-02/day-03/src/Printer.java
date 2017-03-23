@@ -9,14 +9,14 @@
 
 public class Printer {
   public static void main(String[] args) {
-    String[] lines = {"Work,", "for", "fucks", "sake!"};
+    String[] lines = {"Work,", "for", "f@*ks", "sake!"};
     printer1(lines);
 
     System.out.println();
 
     String argument1 = "Működjél";
     String argument2 = "már,";
-    String argument3 = "bassza-";
+    String argument3 = "b@*%za-";
     String argument4 = "meg!";
     printer2(argument1, argument2, argument3, argument4);
   }
