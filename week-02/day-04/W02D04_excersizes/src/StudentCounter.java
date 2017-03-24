@@ -65,7 +65,7 @@ public class StudentCounter{
       }
     }
 
-    int sumAge = 0;
+    Double sumAge = .0;
 
     for (int i = 0; i < length; i++) {
 
