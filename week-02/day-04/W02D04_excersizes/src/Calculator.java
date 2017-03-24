@@ -16,12 +16,13 @@
 // Waits for the user input
 // Print the result to the prompt
 // Exit
+
 import java.util.Scanner;
 
 public class Calculator {
   public static void main(String... args) {
-    System.out.println("I would kindly ask you to type in");
-    System.out.println("a mathematical expression in the following format: ");
+    System.out.println("Please type in a mathematical");
+    System.out.println("expression in the following format: ");
     System.out.println("{operation} {operand} {operand}");
     System.out.println("Examples:");
     System.out.println("+ 3 3 -> the result will be 6");
@@ -30,17 +31,16 @@ public class Calculator {
     Scanner scanner = new Scanner (System.in);
     String userExpression = scanner.nextLine();
 
-    System.out.println();
-
     Character operationChar = userExpression.charAt(0);
     String operationString = Character.toString(operationChar);
 
-    Character value1Char = userExpression.charAt(2);
-    String value1String = Character.toString(value1Char);
-    int value1 = Integer.parseInt(value1String);
+    int firstWhiteSpace = userExpression.indexOf(" ");
+    int secondWhiteSpace = userExpression.indexOf(" ", firstWhiteSpace+1);
+    int endOfUserExpression = userExpression.length();
 
-    Character value2Char = userExpression.charAt(4);
-    String value2String = Character.toString(value2Char);
+    String value1String = userExpression.substring(firstWhiteSpace, secondWhiteSpace).trim();
+    String value2String = userExpression.substring(secondWhiteSpace, endOfUserExpression).trim();
+    int value1 = Integer.parseInt(value1String);
     int value2 = Integer.parseInt(value2String);
 
     if (operationString.equals("*")) {
@@ -48,7 +48,7 @@ public class Calculator {
     } else if (operationString.equals("/")) {
       System.out.println(value1 + " / " + value2 + " = " + value1 / value2);
     } else if (operationString.equals("+")) {
-      System.out.println(value1 + " + " + value2 + " = " + value1 + value2);
+      System.out.println(value1 + " + " + value2 + " = " + (value1 + value2));
     } else if (operationString.equals("-")) {
       System.out.println(value1 + " - " + value2 + " = " + (value1 - value2));
     } else if (operationString.equals("%")) {
