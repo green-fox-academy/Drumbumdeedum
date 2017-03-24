@@ -11,11 +11,16 @@ public class PalindromeBuilder {
     System.out.println("Please enter a word:");
     String userInput = scanner.nextLine();
 
-    createPalindrome(userInput);
+    System.out.println(createPalindrome(userInput));
   }
 
-  public static void createPalindrome(String word) {
+  public static String createPalindrome(String word) {
 
+    String reversedInput = "";
 
+    for (int i = 0; i < word.length(); i++) {
+      reversedInput += word.charAt(word.length()-1-i);
+    }
+    return word + reversedInput;
   }
 }
