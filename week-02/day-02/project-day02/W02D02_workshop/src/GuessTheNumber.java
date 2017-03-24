@@ -13,12 +13,16 @@ import java.util.Scanner;
 
 public class GuessTheNumber {
   public static void main(String[] args) {
-    int random = (int)(Math.random()* 10 + 1);
+
+    int random = (int)(Math.random()* 100 + 1);
     boolean guessed = false;
+
     while (guessed == false) {
+
       Scanner scanner = new Scanner(System.in);
       System.out.println("Guess the number!");
       int userInt = scanner.nextInt();
+
       if (userInt == random) {
         System.out.println("You found the number: " + random);
         guessed = true;
