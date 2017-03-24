@@ -8,10 +8,10 @@ public class GuessMyNumber {
   public static void main(String[] args) {
     Scanner scanner = new Scanner(System.in);
 
-    System.out.println("Let's play a guessing game!\nFirst, lets pick the range!\nWhat should the first number be?");
+    System.out.println("Let's play a guessing game!\nFirst, lets pick the range!\nWhat should the first (lower) number be?");
     int firstNumber = scanner.nextInt();
 
-    System.out.println("Cool! Now, what should the second number be?");
+    System.out.println("Cool! Now, what should the second (higher) number be?");
     int secondNumber = scanner.nextInt();
 
     System.out.println("You will have a limited amount of tries, also known as \"lives\". How many lives do you want to have?");
@@ -22,8 +22,8 @@ public class GuessMyNumber {
 
     int randomNumber = (int)(Math.random()* ((secondNumber - firstNumber) + 1) + firstNumber);
 
-    System.out.println("\n/Helper: the random number is: " + randomNumber +"/");
-
+    // randomNumber helper: displays randomNumber for testing purposes.
+    // System.out.println("\n/Helper: the random number is: " + randomNumber +"/");
 
     boolean guessed = false;
 
