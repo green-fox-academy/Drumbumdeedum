@@ -6,7 +6,6 @@
 //  - Who has got more candies than 4 candies
 //  - Sum the age of people who have lass than 5 candies
 
-import com.sun.tools.doclets.formats.html.SourceToHTMLConverter;
 import java.util.*;
 
 public class StudentCounter{
