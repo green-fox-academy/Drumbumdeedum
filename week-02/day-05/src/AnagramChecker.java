@@ -13,13 +13,13 @@ public class AnagramChecker {
     System.out.println("Please enter a word:");
     String word1 = scanner.nextLine();
 
-    System.out.println("Please enter another word, to see if it's and annagram of the first word:");
+    System.out.println("Please enter another word, to see if it's and anagram of the first word:");
     String word2 = scanner.nextLine();
 
-    isAnnagram(word1, word2);
+    isAnagram(word1, word2);
   }
 
-  public static void isAnnagram (String word1, String word2) {
+  public static void isAnagram (String word1, String word2) {
 
     String word1Lowercase = word1.toLowerCase();
     char[] chars1 = word1Lowercase.toCharArray();

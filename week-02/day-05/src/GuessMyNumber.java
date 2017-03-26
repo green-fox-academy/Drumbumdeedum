@@ -5,13 +5,14 @@
 import java.util.Scanner;
 
 public class GuessMyNumber {
+
   public static void main(String[] args) {
     Scanner scanner = new Scanner(System.in);
 
-    System.out.println("Let's play a guessing game!\nFirst, lets pick the range!\nWhat should the first (lower) number be?");
+    System.out.println("Let's play a guessing game!\nI will think of a random number, and you have to guess it!\nFirst, lets pick the range!\nWhat should the first (lower) number be? This will be the floor of the range.");
     int firstNumber = scanner.nextInt();
 
-    System.out.println("Cool! Now, what should the second (higher) number be?");
+    System.out.println("Cool! Now, what should the second (higher) number be? This will be the ceiling of the range.");
     int secondNumber = scanner.nextInt();
 
     System.out.println("You will have a limited amount of tries, also known as \"lives\". How many lives do you want to have?");
