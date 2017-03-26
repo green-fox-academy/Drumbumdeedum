@@ -10,17 +10,19 @@ public class PalindromeSearcher {
   public static void main(String[] args) {
     Scanner scanner = new Scanner (System.in);
 
-    //System.out.println("Please enter a word:");
-    //String userInput = scanner.nextLine();
+    System.out.println("Please enter a word:");
+    String userInput = scanner.nextLine();
 
-    System.out.println(searchPalindrome("dog goat dad duck doodle never"));
+    // String sampleWord: "dog goat dad duck doodle never";
+
+    System.out.println(searchPalindrome(userInput));
   }
 
   public static ArrayList searchPalindrome(String word) {
 
     ArrayList<String> palindromeList = new ArrayList<>();
 
-      for (int startingIndex = 0; word.length()-startingIndex > 3; startingIndex++) {
+      for (int startingIndex = 0; word.length()-startingIndex >= 3; startingIndex++) {
         for (int addToWordLength = 0; startingIndex + addToWordLength < word.length()-2;
           addToWordLength++) {
 
