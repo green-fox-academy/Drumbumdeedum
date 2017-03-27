@@ -12,9 +12,11 @@ public class AnagramChecker {
 
     System.out.println("Please enter a word:");
     String word1 = scanner.nextLine();
+    word1 = word1.replaceAll("\\s", "");
 
     System.out.println("Please enter another word, to see if it's and anagram of the first word:");
     String word2 = scanner.nextLine();
+    word2 = word2.replaceAll("\\s", "");
 
     isAnagram(word1, word2);
   }

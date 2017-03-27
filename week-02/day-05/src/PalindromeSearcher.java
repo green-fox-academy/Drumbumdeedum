@@ -10,7 +10,7 @@ public class PalindromeSearcher {
   public static void main(String[] args) {
     Scanner scanner = new Scanner (System.in);
 
-    System.out.println("Please enter a word:");
+    System.out.println("Please enter a word or a sentence: ");
     String userInput = scanner.nextLine();
 
     // String sampleWord: "dog goat dad duck doodle never";
