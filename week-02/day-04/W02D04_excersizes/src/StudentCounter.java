@@ -51,7 +51,7 @@ public class StudentCounter{
 
   int length = map.size();
 
-  String whoHasMoreCandies = "The following children have more than 4 pieces of candy: ";
+    String whoHasMoreCandies = "The following children have more than 4 pieces of candy: ";
 
   for (int i = 0; i < length; i++) {
 
