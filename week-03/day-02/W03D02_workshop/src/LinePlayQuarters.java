@@ -13,8 +13,11 @@ public class LinePlayQuarters {
 
     graphics.drawLine(150, 0, 150, 300);
     graphics.drawLine(0, 150, 300, 150);
-
-
+    graphics.drawLine(0, 0, 300, 0);
+    graphics.drawLine(300, 0, 300, 300);
+    graphics.drawLine(300, 300, 0, 300);
+    graphics.drawLine(0, 300, 0, 0);
+    
     for (int i=0; i < 150; i+=15) {
       graphics.setColor(new Color(255,0,0,150));
       graphics.drawLine(0+i, 0,150, 0+i);
@@ -22,46 +25,26 @@ public class LinePlayQuarters {
       graphics.drawLine(0, 0+i,0+i, 150);
 
       graphics.setColor(new Color(255,0,0,150));
-      graphics.drawLine(165+i, 0,300, 0+i);
+      graphics.drawLine(150+i, 0,300, 0+i);
       graphics.setColor(new Color(10,10,100,150));
-      graphics.drawLine(150, 0+i,165+i, 150);
+      graphics.drawLine(150, 0+i,150+i, 150);
 
       graphics.setColor(new Color(255,0,0,150));
-      graphics.drawLine(0+i, 150,150, 165+i);
+      graphics.drawLine(0+i, 150,150, 150+i);
       graphics.setColor(new Color(10,10,100,150));
-      graphics.drawLine(0, 165+i,0+i, 300);
+      graphics.drawLine(0, 150+i,0+i, 300);
 
       graphics.setColor(new Color(255,0,0,150));
-      graphics.drawLine(165+i, 150,300, 165+i);
+      graphics.drawLine(150+i, 150,300, 150+i);
       graphics.setColor(new Color(10,10,100,150));
-      graphics.drawLine(150, 165+i,165+i, 300);
+      graphics.drawLine(150, 150+i,150+i, 300);
     }
-
-
-
-
-
-
-
-    /*graphics.drawLine(165, 0, 300, 15);
-    graphics.drawLine(30, 0, 150, 30);
-    graphics.drawLine(45, 0, 150, 45);
-    graphics.drawLine(60, 0, 150, 60);
-    graphics.drawLine(75, 0, 150, 75);
-    graphics.drawLine(90, 0, 150, 90);
-    graphics.drawLine(105, 0, 150, 105);
-    graphics.drawLine(120, 0, 150, 120);
-    graphics.drawLine(135, 0, 150, 135);
-    graphics.drawLine(150, 0, 150, 150);*/
-
-
-
   }
 
   //    Don't touch the code below
   public static void main(String[] args) {
     JFrame jFrame = new JFrame("Drawing");
-    jFrame.setSize(new Dimension(300, 300));
+    jFrame.setSize(new Dimension(300, 320));
     jFrame.setDefaultCloseOperation(EXIT_ON_CLOSE);
     jFrame.add(new ImagePanel());
     jFrame.setLocationRelativeTo(null);
