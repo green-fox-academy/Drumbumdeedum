@@ -7,7 +7,7 @@ public class LinePlay {
   public static void mainDraw(Graphics graphics){
     // reproduce this:
     // [https://github.com/greenfox-academy/teaching-materials/blob/master/exercises/drawing/line-play/r1.png]
-    
+
     for (int i=0; i < 300; i+=30) {
       graphics.setColor(new Color(255,0,0,150));
       graphics.drawLine(0+i, 0,300, 0+i);
