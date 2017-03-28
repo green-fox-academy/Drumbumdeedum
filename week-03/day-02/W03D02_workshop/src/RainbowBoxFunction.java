@@ -8,10 +8,10 @@ import static javax.swing.JFrame.EXIT_ON_CLOSE;
 public class RainbowBoxFunction {
 
   public static void mainDraw(Graphics graphics){
-  // create a square drawing function that takes 2 parameters:
-  // the square size, and the fill color,
-  // and draws a square of that size and color to the center of the canvas.
-  // create a loop that fills the canvas with rainbow colored squares.
+    // create a square drawing function that takes 2 parameters:
+    // the square size, and the fill color,
+    // and draws a square of that size and color to the center of the canvas.
+    // create a loop that fills the canvas with rainbow colored squares.
 
     String Violet = "148,0,211";
     String Indigo = "75,0,130";
@@ -33,7 +33,6 @@ public class RainbowBoxFunction {
     colorMap.put(9, Indigo);
     colorMap.put(10, Blue);
 
-
     for (int i=10; i > 0; i--) {
       drawRainbowSquare(i*30, colorMap.get(i), graphics);
     }
@@ -46,11 +45,9 @@ public class RainbowBoxFunction {
     int firstComma = inputColor.indexOf(",");
     int secondComma = inputColor.indexOf(",", firstComma+1);
 
-
     String firstValueString = inputColor.substring(0, firstComma);
     String secondValueString = inputColor.substring(firstComma+1, secondComma);
     String thirdValueString = inputColor.substring(secondComma+1);
-
 
     int firstValue = Integer.parseInt(firstValueString);
     int secondValue = Integer.parseInt(secondValueString);
