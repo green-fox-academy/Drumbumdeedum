@@ -6,11 +6,9 @@ public class PurpleSteps {
 
   public static void mainDraw(Graphics graphics){
 
-
     for (int i=1; i < 18; i++) {
       purpleBox(i*10,graphics);
     }
-
   }
 
   public static void purpleBox (int input, Graphics graphics) {
