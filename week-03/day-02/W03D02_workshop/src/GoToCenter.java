@@ -4,17 +4,27 @@ import java.awt.*;
 
 import static javax.swing.JFrame.EXIT_ON_CLOSE;
 
-public class Diagonals {
+public class GoToCenter {
 
-  public static void mainDraw(Graphics graphics){
-    // draw the canvas' diagonals in green.
+  public static void mainDraw(Graphics graphics) {
+    // create a line drawing function that takes 2 parameters:
+    // the x and y coordinates of the line's starting point
+    // and draws a line from that point to the center of the canvas.
+    // draw 3 lines with that function.
 
-    graphics.setColor(new Color(0,255,0,150));
-    graphics.drawLine(0, 0, 300, 300);
+    drawToCenter(100, 200, graphics);
+    drawToCenter(200, 100, graphics);
+    drawToCenter(50, 20, graphics);
 
-    graphics.setColor(new Color(0,255,0,150));
-    graphics.drawLine(300, 0, 0, 300);
   }
+
+  public static void drawToCenter (int input1, int input2, Graphics graphics) {
+
+    graphics.drawLine(input1, input2, 150,150);
+
+  }
+
+
 
 
 
@@ -32,7 +42,7 @@ public class Diagonals {
     protected void paintComponent(Graphics graphics) {
       super.paintComponent(graphics);
       mainDraw(graphics);
+
     }
   }
-
 }
