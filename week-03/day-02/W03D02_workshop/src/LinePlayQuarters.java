@@ -17,7 +17,7 @@ public class LinePlayQuarters {
     graphics.drawLine(300, 0, 300, 300);
     graphics.drawLine(300, 300, 0, 300);
     graphics.drawLine(0, 300, 0, 0);
-    
+
     for (int i=0; i < 150; i+=15) {
       graphics.setColor(new Color(255,0,0,150));
       graphics.drawLine(0+i, 0,150, 0+i);
