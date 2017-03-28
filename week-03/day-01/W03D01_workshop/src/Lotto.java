@@ -84,6 +84,6 @@ public class Lotto {
     for (int i = 1; i < 200; i++) {
       dictionaryOfNumbers.add(i, new ArrayList<Integer>());
     }*/
-    
+
   }
 }

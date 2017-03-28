@@ -9,16 +9,16 @@ public class CheckerBoard {
   public static void mainDraw(Graphics graphics){
     // fill the canvas with a checkerboard pattern.
 
-    for (int i=0; i < 8; i +=2) {
+    /*for (int i=0; i < 8; i +=2) {
       graphics.setColor(new Color(0, 0, 0, 255));
       graphics.fillRect(40 * i, 40*i, 40, 40);
 
       graphics.setColor(new Color(0, 0, 0, 255));
       graphics.fillRect(40 * (i+1), 40*(i+1), 40, 40);
-    }
+    }*/
 
 
-    /*for (int i=0; i < 8; i +=2) {
+    for (int i=0; i < 8; i +=2) {
       graphics.setColor(new Color(0,0,0, 255));
       graphics.fillRect(40*i, 0, 40 , 40);
     }
@@ -49,8 +49,7 @@ public class CheckerBoard {
     for (int i=0; i < 8; i +=2) {
       graphics.setColor(new Color(0,0,0, 255));
       graphics.fillRect(40*(i+1), 280, 40 , 40);
-    }*/
-
+    }
   }
 
   //    Don't touch the code below
