@@ -84,24 +84,6 @@ public class Lotto {
     for (int i = 1; i < 200; i++) {
       dictionaryOfNumbers.add(i, new ArrayList<Integer>());
     }*/
-
-
-    String str = mapOfNumbers.toString();
-
-
-
-
-    System.out.println(str.indexOf("189"));
-
-    System.out.println("189 times: " + str.substring(88, 90) + ", " + str.substring(432, 434));
-
-    System.out.println("190 times: " + str.substring(64, 66) + ", " + str.substring(320, 322) );
-
-    System.out.println("193 times: " + str.substring(512, 514) + ", " + str.substring(600, 602) + ", " + str.substring(672, 674));
-
-    System.out.println("197 times: " + str.substring(216, 218) + ", " + str.substring(584, 586));
-
-    System.out.println("199 times: " + str.substring(15, 16));
-
+    
   }
 }
