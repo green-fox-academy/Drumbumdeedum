@@ -16,7 +16,6 @@ public class EveryThingGoesToCenter {
       drawToCenter(300, 300-(i+0), graphics);
       drawToCenter(300-(0+i), 300, graphics);
     }
-
   }
 
   public static void drawToCenter (int input1, int input2, Graphics graphics) {
