@@ -7,12 +7,16 @@ import static javax.swing.JFrame.EXIT_ON_CLOSE;
 public class PurpleSteps3D {
 
   public static void mainDraw(Graphics graphics){
+    
+    int startXY = 10;
+    int baseSize = 0;
 
     for (int i=0; i < 6; i++) {
-      purpleBox(i+((i-1)*10), i*10, graphics);
+      baseSize += 10;
+      purpleBox(startXY, baseSize, graphics);
+      startXY += baseSize;
     }
   }
-
 
   public static void purpleBox (int input1, int input2, Graphics graphics) {
     graphics.setColor(new Color(75,0,130, 150));

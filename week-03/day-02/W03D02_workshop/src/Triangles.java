@@ -27,7 +27,7 @@ public class Triangles {
       graphics.drawLine(centerX+sideHalf*(i-1), centerY+triangleHeight*(i-1), centerX-sideHalf*triangleRows+triangleSide*(i-1),centerY+triangleHeight*triangleRows);
     }
   }
-  
+
   //    Don't touch the code below
   public static void main(String[] args) {
     JFrame jFrame = new JFrame("Drawing");
