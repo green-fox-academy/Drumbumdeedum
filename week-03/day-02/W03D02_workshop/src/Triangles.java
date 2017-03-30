@@ -2,20 +2,19 @@ import javax.swing.*;
 import java.awt.*;
 import static javax.swing.JFrame.EXIT_ON_CLOSE;
 
-
 public class Triangles {
 
   public static void mainDraw(Graphics graphics){
 
     // Where should the top of the big triangle be?
-    int centerX = 150;
+    int centerX = 400;
     int centerY = 30;
 
     // What should the length of the small triangles sides be?
-    int triangleSide = 20;
+    int triangleSide = 10;
 
     // How many rows of small triangles should the big triangle have?
-    int triangleRows = 10;
+    int triangleRows = 50;
 
     int sideHalf = triangleSide /2;
     Double sideDouble = triangleSide*Math.sqrt(3)/2;
@@ -27,7 +26,6 @@ public class Triangles {
       graphics.drawLine(centerX+sideHalf*(i-1), centerY+triangleHeight*(i-1), centerX-sideHalf*triangleRows+triangleSide*(i-1),centerY+triangleHeight*triangleRows);
     }
   }
-
   //    Don't touch the code below
   public static void main(String[] args) {
     JFrame jFrame = new JFrame("Drawing");
