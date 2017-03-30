@@ -7,14 +7,14 @@ public class Triangles {
   public static void mainDraw(Graphics graphics){
 
     // Where should the top of the big triangle be?
-    int centerX = 400;
+    int centerX = 725;
     int centerY = 30;
 
     // What should the length of the small triangles sides be?
     int triangleSide = 10;
 
     // How many rows of small triangles should the big triangle have?
-    int triangleRows = 50;
+    int triangleRows = 100;
 
     int sideHalf = triangleSide /2;
     Double sideDouble = triangleSide*Math.sqrt(3)/2;
