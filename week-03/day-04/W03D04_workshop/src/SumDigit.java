@@ -1,8 +1,7 @@
 public class SumDigit {
 
   public static void main(String[] args) {
-    sumDigits(126);
-    System.out.println(sumDigits(126));
+    System.out.println(sumDigits(12645));
   }
 
   public static int sumDigits(int number) {
