@@ -11,10 +11,15 @@ import javax.swing.*;
 public class SquareGrid {
 
   public static void mainDraw(Graphics g) {
-    drawRecursiveSquare(6, 420, 420, 400, 20,  g);
+
+    double color1 = 1;
+    double color2 = 1;
+    double color3 = 1;
+
+    drawRecursiveSquare(6, 420, 420, 300, 20, color1, color2, color3,  g);
   }
 
-  public static void drawRecursiveSquare(int depth, double centerX, double centerY, double side, float lineWidth, Graphics g) {
+  public static void drawRecursiveSquare(int depth, double centerX, double centerY, double side, float lineWidth, double color1, double color2, double color3, Graphics g) {
 
     Polygon square = new Polygon();
 
@@ -26,13 +31,18 @@ public class SquareGrid {
     square.addPoint((int)(centerX + side/2), (int)(centerY + side/2));
     square.addPoint((int)(centerX - side/2), (int)(centerY + side/2));
 
+    color1 = 1 * Math.random() * 255 + 1;
+    color2 = 1 * Math.random() * 255 + 1;
+    color3 = 1 * Math.random() * 255 + 1;
+
+    g.setColor(new Color((int)color1,(int)color2,(int)color3, 255));
     g.drawPolygon(square);
 
     if (depth > 0) {
-      drawRecursiveSquare(depth-1, centerX - side/2, centerY - side/2, side / 2, lineWidth / 2, g);
-      drawRecursiveSquare(depth-1, centerX + side/2, centerY - side/2, side / 2, lineWidth / 2, g);
-      drawRecursiveSquare(depth-1, centerX - side/2, centerY + side/2, side / 2, lineWidth / 2, g);
-      drawRecursiveSquare(depth-1, centerX + side/2, centerY + side/2, side / 2, lineWidth / 2, g);
+      drawRecursiveSquare(depth-1, centerX - side/2, centerY - side/2, side / 2, lineWidth / 2, color1, color2, color3, g);
+      drawRecursiveSquare(depth-1, centerX + side/2, centerY - side/2, side / 2, lineWidth / 2, color1, color2, color3, g);
+      drawRecursiveSquare(depth-1, centerX - side/2, centerY + side/2, side / 2, lineWidth / 2, color1, color2, color3, g);
+      drawRecursiveSquare(depth-1, centerX + side/2, centerY + side/2, side / 2, lineWidth / 2, color1, color2, color3, g);
     }
   }
 
