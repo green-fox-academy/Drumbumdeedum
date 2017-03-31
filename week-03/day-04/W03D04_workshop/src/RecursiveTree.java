@@ -5,25 +5,28 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import java.awt.Polygon;
 
-public class RecursiveHexagon {
+public class RecursiveTree {
 
   public static void mainDraw(Graphics g) {
-    drawHexagon(4, 300, 300, 200, g);
+
+
+    //drawTree(400,400 400, 10, g);
   }
 
-  public static void drawHexagon(int depth, double centerX, double centerY, double side, Graphics g) {
+  /*public static void drawTree(double startX, double length, int branches, Graphics g) {
     Polygon p = new Polygon();
-    for (int i=1; i < 7; i++) {
-      p.addPoint((int) (centerX + side * Math.cos(i * 2 * Math.PI / 6)), (int) (centerY + side * Math.sin(i * 2 * Math.PI / 6)));
-    }
+    p.addPoint((int)startX, (int)startX);
+    p.addPoint((int)startX, (int)startX-(int)length);
     g.drawPolygon(p);
 
-    if (depth > 0) {
-      drawHexagon(depth - 1, centerX - side / 4, centerY - side / 2.33, side / 2, g);
-      drawHexagon(depth - 1, centerX + side / 2, centerY, side / 2, g);
-      drawHexagon(depth - 1, centerX - side / 4, centerY + side / 2.33, side / 2, g);
+    if (branches > 0) {
+      drawTree(startX,);
     }
-  }
+
+
+  }*/
+
+
 
   //    Don't touch the code below
   public static void main(String[] args) {
