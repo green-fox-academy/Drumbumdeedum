@@ -19,16 +19,16 @@ public class RecursiveHexStar {
     g.drawPolygon(p);
 
     if (depth > 0) {
-      drawHexagon(depth - 1, centerX - side / 3, centerY - side / 1.74, side / 3, g);
-      drawHexagon(depth - 1, centerX + side / 3, centerY - side / 1.74, side / 3, g);
+      drawHexagon(depth - 1, centerX - side / 3, centerY - side / Math.sqrt(3), side / 3, g);
+      drawHexagon(depth - 1, centerX + side / 3, centerY - side / Math.sqrt(3), side / 3, g);
       drawHexagon(depth - 1, centerX + side/3*2, centerY, side / 3, g);
       drawHexagon(depth - 1, centerX - side/3*2, centerY, side / 3, g);
-      drawHexagon(depth - 1, centerX - side / 3, centerY + side / 1.74, side / 3, g);
-      drawHexagon(depth - 1, centerX + side / 3, centerY + side / 1.74, side / 3, g);
+      drawHexagon(depth - 1, centerX - side / 3, centerY + side / Math.sqrt(3), side / 3, g);
+      drawHexagon(depth - 1, centerX + side / 3, centerY + side / Math.sqrt(3), side / 3, g);
     }
   }
 
-  //    Don't touch the code below
+  //    Don't touch the code below!!!
   public static void main(String[] args) {
     JFrame jFrame = new JFrame("Drawing");
     jFrame.setSize(new Dimension(600, 620));

@@ -5,8 +5,6 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import java.awt.Polygon;
 import java.awt.*;
-import java.awt.geom.Line2D;
-import javax.swing.*;
 
 public class SquareGrid {
 
@@ -16,7 +14,7 @@ public class SquareGrid {
     double color2 = 1;
     double color3 = 1;
 
-    drawRecursiveSquare(6, 420, 420, 300, 20, color1, color2, color3,  g);
+    drawRecursiveSquare(6, 400, 400, 300, 20, color1, color2, color3,  g);
   }
 
   public static void drawRecursiveSquare(int depth, double centerX, double centerY, double side, float lineWidth, double color1, double color2, double color3, Graphics g) {
@@ -49,7 +47,7 @@ public class SquareGrid {
   //    Don't touch the code below
   public static void main(String[] args) {
     JFrame jFrame = new JFrame("Drawing");
-    jFrame.setSize(new Dimension(600, 620));
+    jFrame.setSize(new Dimension(800, 820));
     jFrame.setDefaultCloseOperation(EXIT_ON_CLOSE);
     jFrame.add(new ImagePanel());
     jFrame.setLocationRelativeTo(null);

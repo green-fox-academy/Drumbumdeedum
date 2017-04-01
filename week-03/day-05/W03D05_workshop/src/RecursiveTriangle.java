@@ -8,6 +8,7 @@ import java.awt.Polygon;
 public class RecursiveTriangle {
 
   public static void mainDraw(Graphics g) {
+
     drawRecursiveTriangle(6, 300, 300, 400, g);
   }
 
