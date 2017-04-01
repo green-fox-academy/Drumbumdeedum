@@ -18,8 +18,8 @@ public class RecursiveTriCircle {
 
     if (depth > 0) {
       drawTriCircle(depth - 1, centerX, centerY-heightWidth/4d, heightWidth/2d, g);
-      drawTriCircle(depth - 1, (int)centerX-heightWidth/4.67d, (int)centerY+heightWidth/7.36, heightWidth/2d, g);
-      drawTriCircle(depth - 1, (int)centerX+heightWidth/4.67d, (int)centerY+heightWidth/7.36, heightWidth/2d, g);
+      drawTriCircle(depth - 1, (int)(centerX-(int)(Math.sin(Math.toRadians(60)) * heightWidth/4)), (int)(centerY+(int)(Math.sin(Math.toRadians(30)) * heightWidth/4)), heightWidth/2d, g);
+      drawTriCircle(depth - 1, (int)(centerX+(int)(Math.sin(Math.toRadians(60)) * heightWidth/4)), (int)(centerY+(int)(Math.sin(Math.toRadians(30)) * heightWidth/4)), heightWidth/2d, g);
     }
   }
 
