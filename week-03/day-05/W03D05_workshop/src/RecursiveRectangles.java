@@ -14,7 +14,7 @@ public class RecursiveRectangles {
     double color2 = 1;
     double color3 = 1;
 
-    drawRecursiveSquare(3, 400, 400, 200, color1, color2, color3, g);
+    drawRecursiveSquare(4, 400, 400, 200, color1, color2, color3, g);
   }
 
   public static void drawRecursiveSquare(int depth, double centerX, double centerY, double side, double color1, double color2, double color3, Graphics g) {
@@ -29,8 +29,8 @@ public class RecursiveRectangles {
     color1 = 1 * Math.random() * 255 + 1;
     color2 = 1 * Math.random() * 255 + 1;
     color3 = 1 * Math.random() * 255 + 1;
-
     g.setColor(new Color((int) color1, (int) color2, (int) color3, 255));
+
     g.fillPolygon(square);
 
     if (depth > 0) {

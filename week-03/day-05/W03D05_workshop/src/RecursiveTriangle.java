@@ -1,4 +1,6 @@
 import static javax.swing.JFrame.EXIT_ON_CLOSE;
+
+import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics;
 import javax.swing.JFrame;
@@ -9,20 +11,24 @@ public class RecursiveTriangle {
 
   public static void mainDraw(Graphics g) {
 
-    drawRecursiveTriangle(6, 300, 300, 400, g);
+    drawRecursiveTriangle(4, 300, 300, 400, g);
   }
 
   public static void drawRecursiveTriangle(int depth, double centerX, double centerY, double side, Graphics g) {
 
     double height = (side*Math.sqrt(3d))/2d;
-
     Polygon triangle = new Polygon();
 
     triangle.addPoint((int)(centerX - side/2), (int)(centerY - height/2));
     triangle.addPoint((int)(centerX + side/2), (int)(centerY - height/2));
     triangle.addPoint((int)(centerX - 0), (int)(centerY + height/2));
 
-    g.drawPolygon(triangle);
+    double color1 = Math.random() * 255 + 1;
+    double color2 = Math.random() * 255 + 1;
+    double color3 = Math.random() * 255 + 1;
+    g.setColor(new Color((int) color1, (int) color2, (int) color3, 155));
+
+    g.fillPolygon(triangle);
 
     if (depth > 0) {
       drawRecursiveTriangle(depth - 1, centerX - side/4d ,(centerY - height/4d), side/2d, g);
