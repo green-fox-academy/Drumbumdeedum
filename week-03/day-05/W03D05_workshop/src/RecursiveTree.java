@@ -5,7 +5,7 @@ import java.awt.*;
 public class RecursiveTree {
 
   public static void mainDraw(Graphics g) {
-    drawTree(7,550, 700, -90, 35, 150, 17, 70, 50,30, g);
+    drawTree(7,550, 700, -90, 35, 100, 17, 70, 50,30, g);
     g.setColor(new Color(102,170,85));
     g.fillRect(0,700,1000,100);
     g.setColor(new Color(255,255,0));
@@ -44,7 +44,7 @@ public class RecursiveTree {
     @Override
     protected void paintComponent(Graphics graphics) {
       super.paintComponent(graphics);
-      this.setBackground(Color.WHITE);
+      this.setBackground(new Color (	126,	192,	238));
       mainDraw(graphics);
     }
   }
