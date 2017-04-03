@@ -5,23 +5,23 @@ import java.awt.*;
 public class RecursiveTree {
 
   public static void mainDraw(Graphics g) {
-    drawTree(7,0, 700, -90, 35, 100, 17, 70, 50,30, g);
-    drawTree(7,75, 700, -90, 35, 50, 17, 70, 50,30, g);
-    drawTree(7,150, 700, -90, 35, 70, 17, 70, 50,30, g);
-    drawTree(7,225, 700, -90, 35, 90, 17, 70, 50,30, g);
-    drawTree(7,300, 700, -90, 35, 40, 17, 70, 50,30, g);
-    drawTree(7,370, 700, -90, 35, 120, 17, 70, 50,30, g);
-    drawTree(7,450, 700, -90, 35, 60, 17, 70, 50,30, g);
-    drawTree(7,525, 700, -90, 35, 50, 17, 70, 50,30, g);
-    drawTree(7,600, 700, -90, 35, 80, 17, 70, 50,30, g);
-    drawTree(7,675, 700, -90, 35, 100, 17, 70, 50,30, g);
-    drawTree(7,750, 700, -90, 35, 40, 17, 70, 50,30, g);
-    drawTree(7,820, 700, -90, 35, 60, 17, 70, 50,30, g);
-    drawTree(7,905, 700, -90, 35, 130, 17, 70, 50,30, g);
-    drawTree(7,970, 700, -90, 35, 80, 17, 70, 50,30, g);
-    drawTree(7,1005, 700, -90, 35, 100, 17, 70, 50,30, g);
+    drawTree(8,0, 700, -90, 35, 100, 17, 70, 50,30, g);
+    drawTree(8,75, 700, -90, 35, 50, 17, 70, 50,30, g);
+    drawTree(8,150, 700, -90, 35, 70, 17, 70, 50,30, g);
+    drawTree(8,225, 700, -90, 35, 90, 17, 70, 50,30, g);
+    drawTree(8,300, 700, -90, 35, 40, 17, 70, 50,30, g);
+    drawTree(8,370, 700, -90, 35, 120, 17, 70, 50,30, g);
+    drawTree(8,450, 700, -90, 35, 60, 17, 70, 50,30, g);
+    drawTree(8,525, 700, -90, 35, 50, 17, 70, 50,30, g);
+    drawTree(8,600, 700, -90, 35, 120, 17, 70, 50,30, g);
+    drawTree(8,675, 700, -90, 35, 100, 17, 70, 50,30, g);
+    drawTree(8,750, 700, -90, 35, 40, 17, 70, 50,30, g);
+    drawTree(8,820, 700, -90, 35, 60, 17, 70, 50,30, g);
+    drawTree(8,905, 700, -90, 35, 130, 17, 70, 50,30, g);
+    drawTree(8,970, 700, -90, 35, 80, 17, 70, 50,30, g);
+    drawTree(8,1005, 700, -90, 35, 100, 17, 70, 50,30, g);
 
-    g.setColor(new Color(102,170,85));
+    g.setColor(new Color(20,100,50));
     g.fillRect(0,700,2000,300);
     g.setColor(new Color(255,255,148));
     g.fillOval(20,20,200,200);
@@ -29,11 +29,8 @@ public class RecursiveTree {
     g.fillOval(60,40,200,200);
 
     for (int i=0; i < 50; i++) {
-      drawStar((int)(Math.random() * 850 + 150), (int)(Math.random() * 240 + 0),10, g);
+      drawStar((int)(Math.random() * 850 + 150), (int)(Math.random() * 240 + 0),8, g);
     }
-
-
-
   }
 
   public static void drawTree(int depth, int startX, int startY, double angle, double angleAdjust, double length, double lineWidth, int color1, int color2, int color3, Graphics g) {
@@ -75,8 +72,6 @@ public class RecursiveTree {
     g.setColor(new Color(255, 255, 148));
     g.fillPolygon(triangle2);
   }
-
-
 
   //    Don't touch the code below
   public static void main(String[] args) {
