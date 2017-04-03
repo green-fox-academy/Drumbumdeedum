@@ -2,12 +2,9 @@ public class Animal {
   int hunger;
   int thirst;
 
-  public Animal(int hunger, int thirst) {
+  public Animal() {
     this.hunger = 50;
     this.thirst = 50;
-  }
-
-  public void createAnimal() {
   }
 
   public void eat () {
@@ -28,9 +25,9 @@ class createAnimal {
 
   public static void main(String[] args) {
 
-    Animal zebra = new Animal(0,0);
-    Animal tiger = new Animal(0,0);
-    Animal lion = new Animal(0,0);
+    Animal zebra = new Animal();
+    Animal tiger = new Animal();
+    Animal lion = new Animal();
 
     zebra.eat();
     zebra.eat();
