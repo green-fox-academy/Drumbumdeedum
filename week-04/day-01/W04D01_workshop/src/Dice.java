@@ -51,7 +51,7 @@ public class Dice {
         }
       }
     }
-    
+
     for (int i=0; i < 6; i++) {
       System.out.println("Dice nr." + (i+1) + " is a: " + myDice.getCurrent(i));
     }

@@ -4,7 +4,6 @@ public class PostIt {
   String textColor;
 
   public PostIt(){
-
   }
 
   public void createPostIt() {
