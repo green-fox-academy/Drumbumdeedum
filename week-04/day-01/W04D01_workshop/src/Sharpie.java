@@ -10,25 +10,7 @@ public class Sharpie {
   }
 
   public void use() {
-    this.inkAmount -= 1;
+    inkAmount -= 1;
   }
 }
 
-class createSharpie {
-
-  public static void main(String[] args) {
-
-    Sharpie sharpie1 = new Sharpie("red", 1);
-
-    System.out.println(sharpie1.color);
-    System.out.println(sharpie1.width);
-    System.out.println(sharpie1.inkAmount);
-    System.out.println();
-
-    sharpie1.use();
-
-    System.out.println(sharpie1.color);
-    System.out.println(sharpie1.width);
-    System.out.println(sharpie1.inkAmount);
-  }
-}
