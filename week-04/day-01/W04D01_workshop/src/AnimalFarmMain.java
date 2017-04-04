@@ -40,20 +40,10 @@ public class AnimalFarmMain {
 
     System.out.println();
     farm.slaughter();
-    System.out.println();
-
     System.out.println("Number of animals on farm after slaughter: " + farm.animals.size());
-
-    System.out.println();
     farm.slaughter();
-    System.out.println();
-
     System.out.println("Number of animals on farm after slaughter: " + farm.animals.size());
-
-    System.out.println();
     farm.slaughter();
-    System.out.println();
-
     System.out.println("Number of animals on farm after slaughter: " + farm.animals.size());
   }
 }

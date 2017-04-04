@@ -1,3 +1,5 @@
+package GreenFox;
+
 import java.util.ArrayList;
 
 public class Main {
@@ -36,5 +38,12 @@ public class Main {
       person.introduce();
       person.getGoal();
     }
+
+    LagopusClass badass = new LagopusClass("BADA55");
+    badass.addStudent(student);
+    badass.addStudent(john);
+    badass.addMentor(mentor);
+    badass.addMentor(gandhi);
+    badass.info();
   }
 }
