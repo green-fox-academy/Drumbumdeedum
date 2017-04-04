@@ -6,11 +6,11 @@ public class Plants extends Garden {
   double waterLevel;
   String color;
 
-  boolean checkWater () {
+  boolean checkWater() {
     return waterLevel < waterRequirement;
   }
 
-  void getWater (double waterAmount) {
+  void getWater(double waterAmount) {
     if (this.type == "flower") {
       waterLevel += waterAmount * .75f;
     }
@@ -19,7 +19,7 @@ public class Plants extends Garden {
     }
   }
 
-  void plantInfo () {
+  void plantInfo() {
     if (this.checkWater()) {
       System.out.println("The " + color + " " + type + " needs water.");
     } else {

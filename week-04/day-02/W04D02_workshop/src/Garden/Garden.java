@@ -9,16 +9,15 @@ public class Garden {
     gardenPlants = new ArrayList<Plants>();
   }
 
-  void addPlant (Plants name) {
+  void addPlant(Plants name) {
     gardenPlants.add(name);
   }
 
-  void gardenState () {
+  void gardenState() {
     for (int i=0; i < gardenPlants.size(); i++) {
       gardenPlants.get(i).plantInfo();
     }
   }
-
 
   void waterPlants(double waterAmount) {
     System.out.println("Watering plants with " + (int)waterAmount);
