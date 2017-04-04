@@ -8,7 +8,6 @@ public class AnimalFarmMain {
     farm.breed("Elephant");
     farm.breed("Antelope");
 
-
     for (int i=0; i < 4; i++) {
       farm.animals.get(0).eat();
     }
@@ -25,8 +24,6 @@ public class AnimalFarmMain {
       farm.animals.get(3).play();
     }
 
-
-
     System.out.println("Number of animals on farm before slaughter: " + farm.animals.size());
     for (int i=0; i < farm.animals.size(); i++) {
       System.out.println(farm.animals.get(i).name + "\n - has a hunger level of: " + farm.animals.get(i).hunger + "\n - has a thirst level of: " + farm.animals.get(i).thirst);
@@ -38,9 +35,26 @@ public class AnimalFarmMain {
 
     System.out.println("Number of animals on farm after slaughter: " + farm.animals.size());
     for (int i=0; i < farm.animals.size(); i++) {
-    System.out.println(farm.animals.get(i).name + "\n - has a hunger level of: " + farm.animals.get(i).hunger + "\n - has a thirst level of: " + farm.animals.get(i).thirst);
-
+      System.out.println(farm.animals.get(i).name + "\n - has a hunger level of: " + farm.animals.get(i).hunger + "\n - has a thirst level of: " + farm.animals.get(i).thirst);
     }
+
+    System.out.println();
+    farm.slaughter();
+    System.out.println();
+
+    System.out.println("Number of animals on farm after slaughter: " + farm.animals.size());
+
+    System.out.println();
+    farm.slaughter();
+    System.out.println();
+
+    System.out.println("Number of animals on farm after slaughter: " + farm.animals.size());
+
+    System.out.println();
+    farm.slaughter();
+    System.out.println();
+
+    System.out.println("Number of animals on farm after slaughter: " + farm.animals.size());
   }
 }
 
