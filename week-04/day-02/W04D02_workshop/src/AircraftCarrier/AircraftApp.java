@@ -16,11 +16,17 @@ public class AircraftApp {
 
   carrier1.fill();
 
+  System.out.println();
+
   Carrier carrier2 = new Carrier(2000,2000);
 
   carrier1.getStatus();
 
+  System.out.println();
+
   carrier1.fight(carrier2);
+
+  System.out.println();
 
   carrier1.getStatus();
   }
