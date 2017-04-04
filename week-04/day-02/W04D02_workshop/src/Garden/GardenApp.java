@@ -1,6 +1,6 @@
 package Garden;
 
-public class GardenMain {
+public class GardenApp {
 
   public static void main(String[] args) {
 
