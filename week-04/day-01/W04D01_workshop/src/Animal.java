@@ -1,10 +1,12 @@
 public class Animal {
+  String name;
   int hunger;
   int thirst;
 
-  public Animal() {
-    this.hunger = 50;
-    this.thirst = 50;
+  public Animal(String name) {
+    this.name = name;
+    hunger = 50;
+    thirst = 50;
   }
 
   public void eat () {
@@ -21,22 +23,3 @@ public class Animal {
   }
 }
 
-class createAnimal {
-
-  public static void main(String[] args) {
-
-    Animal zebra = new Animal();
-    Animal tiger = new Animal();
-    Animal lion = new Animal();
-
-    zebra.eat();
-    zebra.eat();
-    tiger.drink();
-    lion.play();
-    lion.play();
-
-    System.out.println("Zebra:\n" + "\t - hunger level: " + zebra.hunger + "\n\t - thirst level: " + zebra.thirst);
-    System.out.println("Tiger:\n" + "\t - hunger level: " + tiger.hunger + "\n\t - thirst level: " + tiger.thirst);
-    System.out.println("Lion:\n" + "\t - hunger level: " + lion.hunger + "\n\t - thirst level: " + lion.thirst);
-  }
-}
