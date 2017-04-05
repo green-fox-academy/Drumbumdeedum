@@ -16,13 +16,9 @@ public class Sum {
   public int sumNumbers() {
     int sumValue = 0;
 
-     if (list == null) {
-       return 0;
-     } else {
-       for (int number : list) {
-         sumValue += number;
-       }
-       return sumValue;
-     }
+    for (int number : list) {
+      sumValue += number;
+    }
+    return sumValue;
   }
 }
