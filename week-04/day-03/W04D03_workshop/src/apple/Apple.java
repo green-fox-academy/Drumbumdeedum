@@ -7,6 +7,6 @@ public class Apple {
   }
 
   public String getApple() {
-      return "apple";
+    return "apple";
   }
 }
