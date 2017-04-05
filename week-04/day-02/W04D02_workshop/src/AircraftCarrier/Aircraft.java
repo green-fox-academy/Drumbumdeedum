@@ -1,4 +1,4 @@
-package AircraftCarrier;
+package aircraftcarrier;
 
 public class Aircraft {
   int maxAmmo;

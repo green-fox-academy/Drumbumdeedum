@@ -1,4 +1,4 @@
-package AircraftCarrier;
+package aircraftcarrier;
 
 public class AircraftApp {
 
@@ -26,6 +26,6 @@ public class AircraftApp {
   System.out.println();
 
   carrier1.getStatus();
-    
+
   }
 }

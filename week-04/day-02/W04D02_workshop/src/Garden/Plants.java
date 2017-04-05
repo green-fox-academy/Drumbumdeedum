@@ -1,4 +1,4 @@
-package Garden;
+package garden;
 
 public class Plants extends Garden {
   int waterRequirement;

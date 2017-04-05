@@ -1,4 +1,4 @@
-package GreenFox;
+package greenfox;
 
 public class Student extends Person {
   String previousOrganization;

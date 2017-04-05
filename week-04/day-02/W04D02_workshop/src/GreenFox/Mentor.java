@@ -1,4 +1,4 @@
-package GreenFox;
+package greenfox;
 
 public class Mentor extends Person {
   String level;

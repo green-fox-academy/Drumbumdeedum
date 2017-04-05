@@ -1,4 +1,4 @@
-package AircraftCarrier;
+package aircraftcarrier;
 import java.util.ArrayList;
 
 public class Carrier {
