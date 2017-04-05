@@ -1,6 +1,6 @@
 package garden;
 
-public class Plants extends Garden {
+public class Plants {
   int waterRequirement;
   String type;
   double waterLevel;
@@ -27,6 +27,3 @@ public class Plants extends Garden {
     }
   }
 }
-
-
-
