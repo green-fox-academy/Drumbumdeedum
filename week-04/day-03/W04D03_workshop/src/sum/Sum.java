@@ -5,21 +5,24 @@ import java.util.ArrayList;
 public class Sum {
   private ArrayList<Integer> list;
 
-  public Sum() {
+  public Sum(ArrayList<Integer> inputList) {
     list = new ArrayList<>();
-    list.add(null);
+
+    for (int number : inputList) {
+      list.add(number);
+    }
   }
 
   public int sumNumbers() {
     int sumValue = 0;
 
-    if (list.get(0) != null) {
-      for (int i = 0; i < list.size(); i++) {
-        sumValue += list.get(i);
-      }
-      return sumValue;
-    } else {
-      return 0;
-    }
+     if (list == null) {
+       return 0;
+     } else {
+       for (int number : list) {
+         sumValue += number;
+       }
+       return sumValue;
+     }
   }
 }
