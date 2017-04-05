@@ -5,13 +5,15 @@ public class Carrier {
   int aircraftStore;
   int ammoStore;
   int healthPoints;
+  String name;
 
   private ArrayList<Aircraft> aircraftsOnCarrier;
 
-  public Carrier(int initialHealthPoints, int initialAmmo) {
+  public Carrier(int initialHealthPoints, int initialAmmo, String name) {
     aircraftStore = 0;
     ammoStore = initialAmmo;
     healthPoints = initialHealthPoints;
+    this.name = name;
     aircraftsOnCarrier = new ArrayList<>();
   }
 
@@ -31,10 +33,6 @@ public class Carrier {
       ammoRequired += (aircraftsOnCarrier.get(i).maxAmmo - aircraftsOnCarrier.get(i).currentAmmo);
     }
 
-    if (ammoStore <= 0) {
-      System.out.println("Not enough ammo on carrier!");
-    }
-
     if (ammoRequired < ammoStore) {
       for (int i = 0; i < aircraftsOnCarrier.size(); i++) {
         if (aircraftsOnCarrier.get(i).needsRefill()) {
@@ -42,7 +40,7 @@ public class Carrier {
           ammoStore -= aircraftsOnCarrier.get(i).maxAmmo;
         }
       }
-    } else {
+    } else if (ammoRequired > ammoStore) {
       for (int i = 0; i < aircraftsOnCarrier.size(); i++) {
         if (aircraftsOnCarrier.get(i).getType().equals("F35") && aircraftsOnCarrier.get(i).needsRefill())
           aircraftsOnCarrier.get(i).refill(ammoStore);
@@ -53,9 +51,12 @@ public class Carrier {
           aircraftsOnCarrier.get(i).refill(ammoStore);
           ammoStore -= aircraftsOnCarrier.get(i).maxAmmo;
       }
+    } else if (ammoStore <= 0) {
+      ammoStore = 0;
+      System.out.println("Not enough ammo on carrier!");
     }
-    System.out.println("After the refill all planes have full ammo. READY TO FIGHT!");
-    System.out.println("Carrier has " + ammoStore + " ammo left after refilling all planes.");
+    System.out.println("After the refill all planes on " + this.name + " have full ammo. READY TO FIGHT!");
+    System.out.println(this.name + " has " + ammoStore + " ammo left in the ammo storage after refilling all planes.");
   }
 
   void fight (Carrier name) {
@@ -65,12 +66,13 @@ public class Carrier {
       totalDMG += aircraftsOnCarrier.get(i).fight();
     }
 
+    System.out.println(this.name + " unleashed a fierce attack on the enemy carrier called: " + name.name + ".");
+    System.out.println("Total damage done to " + name.name + ": " + totalDMG);
+    System.out.println(name.name + " had " + name.healthPoints + " health before the attack.");
     name.healthPoints -= totalDMG;
-    System.out.println("A fierce attack has been unleashed upon the enemy carrier!");
-    System.out.println("Total damage done during the attack was: " + totalDMG);
 
     if (name.healthPoints > 0) {
-      System.out.println("Enemy carrier has " + name.healthPoints + " health left.");
+      System.out.println(name.name + " has " + name.healthPoints + " health left after the attack.");
     } else {
       System.out.println("It's dead jim! :(");
     }
@@ -84,6 +86,7 @@ public class Carrier {
     for (int i=0; i < this.aircraftsOnCarrier.size(); i++) {
       totalDMG += aircraftsOnCarrier.get(i).baseDmg * aircraftsOnCarrier.get(i).currentAmmo;
     }
+    System.out.println("Carrier name: " + this.name);
     System.out.println("Detailed status of carrier and aircrafts:");
     System.out.println("Aircraft count: " + this.aircraftsOnCarrier.size() + ", Ammo Storage: " + this.ammoStore + ", Total damage: " + totalDMG);
     System.out.println("Aircrafts:");
