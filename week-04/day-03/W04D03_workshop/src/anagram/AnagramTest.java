@@ -9,13 +9,13 @@ class AnagramTest {
   void isAnagram() {
     Anagram one = new Anagram("dog", "god");
 
-    assertEquals(true, one.checkAnagram());
+    assertTrue(one.checkAnagram());
   }
 
   @Test
   void isNotAnagram() {
     Anagram one = new Anagram("dog", "bob");
 
-    assertEquals(false, one.checkAnagram());
+    assertFalse(one.checkAnagram());
   }
 }
