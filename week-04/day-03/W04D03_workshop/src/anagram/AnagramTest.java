@@ -8,14 +8,12 @@ class AnagramTest {
   @Test
   void isAnagram() {
     Anagram one = new Anagram("dog", "god");
-
     assertTrue(one.checkAnagram());
   }
 
   @Test
   void isNotAnagram() {
     Anagram one = new Anagram("dog", "bob");
-
     assertFalse(one.checkAnagram());
   }
 }
