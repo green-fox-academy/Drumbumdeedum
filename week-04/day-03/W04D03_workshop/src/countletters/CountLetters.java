@@ -14,20 +14,18 @@ public class CountLetters {
 
   public void fillDictionary() {
     for (int i = 0; i < this.inputWord.length(); i++) {
-      if(dictionary.containsKey(this.inputWord.charAt(i))) {
+      if (dictionary.containsKey(this.inputWord.charAt(i))) {
         dictionary.replace(this.inputWord.charAt(i), dictionary.get(this.inputWord.charAt(i)) + 1);
-      }
-      else {
+      } else {
         dictionary.put(this.inputWord.charAt(i), 1);
       }
     }
   }
 
   public int countInWord(char inputCharacter) {
-    if(dictionary.containsKey(inputCharacter)) {
+    if (dictionary.containsKey(inputCharacter)) {
       return dictionary.get(inputCharacter);
-    }
-    else {
+    } else {
       return 0;
     }
   }
