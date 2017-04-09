@@ -14,7 +14,7 @@ public class Aircraft {
 
   int fight() {
     int ammoUsed = this.currentAmmo;
-    this.currentAmmo = 0;
+    currentAmmo = 0;
     int damage = ammoUsed * this.baseDmg;
     totalDmg += damage;
     return damage;

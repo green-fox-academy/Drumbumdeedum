@@ -9,7 +9,7 @@ public class CountLetters {
   public CountLetters(String inputWord) {
     this.inputWord = inputWord;
     dictionary = new HashMap<>();
-    this.fillDictionary();
+    fillDictionary();
   }
 
   public void fillDictionary() {
@@ -30,4 +30,3 @@ public class CountLetters {
     }
   }
 }
-

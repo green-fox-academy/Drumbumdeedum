@@ -4,16 +4,17 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 
 class AnagramTest {
+  public Anagram checkThis;
 
   @Test
   void isAnagram() {
-    Anagram one = new Anagram("dog", "god");
-    assertTrue(one.checkAnagram());
+    checkThis = new Anagram("dog", "god");
+    assertTrue(checkThis.checkAnagram());
   }
 
   @Test
   void isNotAnagram() {
-    Anagram one = new Anagram("dog", "bob");
-    assertFalse(one.checkAnagram());
+    checkThis = new Anagram("dog", "bob");
+    assertFalse(checkThis.checkAnagram());
   }
 }

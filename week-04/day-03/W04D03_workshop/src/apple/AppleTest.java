@@ -5,9 +5,8 @@ import org.junit.jupiter.api.Test;
 
 public class AppleTest {
   @Test
-  public void getApple() throws Exception {
+  public void getApple() {
     Apple apple1 = new Apple();
-
     assertEquals("apple", apple1.getApple());
   }
 }
