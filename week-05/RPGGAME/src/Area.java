@@ -3,6 +3,7 @@ import java.util.ArrayList;
 
 public class Area {
   ArrayList<int[]> wallMap;
+  final static int SIZE = 72;
 
   public Area() {
     wallMap = new ArrayList<>();
@@ -32,10 +33,10 @@ public class Area {
     for (int i=0; i < 10; i += 1) {
       for (int j=0; j < 10; j += 1) {
         if (this.wallMap.get(j)[i] == 1) {
-          PositionedImage floor = new PositionedImage("assets/wall.png", 0+ (i * 72), 0 + (j * 72));
-          floor.draw(graphics);
+          Wall wall = new Wall(i*SIZE, j*SIZE);
+          wall.draw(graphics);
         } else {
-          PositionedImage floor = new PositionedImage("assets/floor.png", 0+ (i * 72), 0 + (j * 72));
+          Floor floor = new Floor(i*SIZE, j*SIZE);
           floor.draw(graphics);
         }
       }
