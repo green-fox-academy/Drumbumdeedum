@@ -1,8 +1,9 @@
-public class Wall extends Models {
+public class Wall extends GameObject {
 
-  public Wall(Integer x, Integer y) {
-    locX = x;
-    locY = y;
-    filename = "assets/wall.png";
+  public Wall(int x, int y) {
+    image = ImageLoader.getInstance().WALL;
+    this.locX = x;
+    this.locY = y;
   }
 }
+

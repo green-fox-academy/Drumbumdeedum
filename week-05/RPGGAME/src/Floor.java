@@ -1,8 +1,8 @@
-public class Floor extends Models {
+public class Floor extends GameObject {
 
-  public Floor(Integer x, Integer y) {
-    locX = x;
-    locY = y;
-    filename = "assets/floor.png";
+  public Floor(int x, int y) {
+    image = ImageLoader.getInstance().FLOOR;
+    this.locX = x;
+    this.locY = y;
   }
 }

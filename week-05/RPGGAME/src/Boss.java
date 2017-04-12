@@ -1,3 +1,3 @@
-public class Boss extends Monsters {
+public class Boss extends Monsters{
 
 }

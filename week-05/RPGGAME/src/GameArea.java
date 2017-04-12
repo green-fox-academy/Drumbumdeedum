@@ -1,11 +1,11 @@
 import java.awt.Graphics;
 import java.util.ArrayList;
 
-public class Area {
+public class GameArea {
   ArrayList<int[]> wallMap;
   final static int SIZE = 72;
 
-  public Area() {
+  public GameArea() {
     wallMap = new ArrayList<>();
     int[] line00 = {0, 0, 0, 1, 0, 0, 0, 0, 0, 0};
     int[] line01 = {0, 0, 0, 1, 0, 1, 0, 0, 0, 0};
@@ -33,11 +33,11 @@ public class Area {
     for (int i=0; i < 10; i += 1) {
       for (int j=0; j < 10; j += 1) {
         if (this.wallMap.get(j)[i] == 1) {
-          Wall wall = new Wall(i*SIZE, j*SIZE);
-          wall.draw(graphics);
+          Wall newObject = new Wall(i * SIZE, j * SIZE);
+          newObject.drawGameObject(graphics);
         } else {
-          Floor floor = new Floor(i*SIZE, j*SIZE);
-          floor.draw(graphics);
+          Floor newObject = new Floor( i * SIZE, j * SIZE);
+          newObject.drawGameObject(graphics);
         }
       }
     }
