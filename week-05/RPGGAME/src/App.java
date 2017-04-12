@@ -5,7 +5,7 @@ import java.awt.*;
 
 public class App extends JComponent implements KeyListener {
   final static int MAP_SIZE = 720;
-  final static int HUD_SIZE = 130;
+  final static int HUD_SIZE = 110;
   final static int ONE_STEP = 1;
   final static int MAP_TILES = 10;
   GameArea newMap;
@@ -25,7 +25,7 @@ public class App extends JComponent implements KeyListener {
     super.paint(graphics);
     newMap.drawArea(graphics);
     newHero.drawGameObject(graphics);
-    newHud.drawHud(graphics, 0, MAP_SIZE + HUD_SIZE);
+    newHud.drawHud(graphics, 0, MAP_SIZE);
   }
 
   public static void main(String[] args) {

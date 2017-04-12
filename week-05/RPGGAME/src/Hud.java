@@ -2,7 +2,7 @@ import java.awt.*;
 
 public class Hud {
 
-  final static int HEIGHT = 130;
+  final static int HEIGHT = 100;
 
   public static void drawHud(Graphics g, int x, int y) {
     fillBackGround(g, x, y);
@@ -10,7 +10,9 @@ public class Hud {
   }
 
   private static void fillBackGround(Graphics g, int x, int y) {
+    g.setColor(Color.white);
+    g.fillRect(x, 720, 720, HEIGHT);
     g.setColor(Color.black);
-    g.fillRect(x, y - HEIGHT, 720, HEIGHT);
+    g.fillRect(5, 725, 710, HEIGHT);
   }
 }
