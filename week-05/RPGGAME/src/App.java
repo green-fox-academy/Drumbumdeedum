@@ -4,14 +4,14 @@ import javax.swing.*;
 import java.awt.*;
 
 public class App extends JComponent implements KeyListener {
-  final static int MAPSIZE = 720;
-  final static int ONESTEP = 1;
-  final static int MAPTILES = 10;
+  final static int MAP_SIZE = 720;
+  final static int ONE_STEP = 1;
+  final static int MAP_TILES = 10;
   GameArea newMap;
   Hero newHero;
 
   public App() {
-    setPreferredSize(new Dimension(MAPSIZE, MAPSIZE));
+    setPreferredSize(new Dimension(MAP_SIZE, MAP_SIZE));
     setVisible(true);
     newMap = new GameArea();
     newHero = new Hero();
@@ -45,22 +45,22 @@ public class App extends JComponent implements KeyListener {
   @Override
   public void keyReleased(KeyEvent e) {
     if (e.getKeyCode() == KeyEvent.VK_UP) {
-      if (newHero.locY >= ONESTEP && newMap.checkObject(newHero.locX, newHero.locY - ONESTEP)) {
+      if (newHero.locY >= ONE_STEP && newMap.checkObject(newHero.locX, newHero.locY - ONE_STEP)) {
         newHero.locY --;
       }
       newHero.setImage(ImageLoader.getInstance().HERO_UP);
     } else if(e.getKeyCode() == KeyEvent.VK_DOWN) {
-      if (newHero.locY < MAPTILES - ONESTEP && newMap.checkObject(newHero.locX, newHero.locY + ONESTEP)) {
+      if (newHero.locY < MAP_TILES - ONE_STEP && newMap.checkObject(newHero.locX, newHero.locY + ONE_STEP)) {
         newHero.locY ++;
       }
       newHero.setImage(ImageLoader.getInstance().HERO_DOWN);
     } else if(e.getKeyCode() == KeyEvent.VK_LEFT) {
-      if (newHero.locX >= ONESTEP && newMap.checkObject(newHero.locX - ONESTEP, newHero.locY)) {
+      if (newHero.locX >= ONE_STEP && newMap.checkObject(newHero.locX - ONE_STEP, newHero.locY)) {
         newHero.locX --;
       }
       newHero.setImage(ImageLoader.getInstance().HERO_LEFT);
     } else if(e.getKeyCode() == KeyEvent.VK_RIGHT) {
-      if (newHero.locX < MAPTILES - ONESTEP && newMap.checkObject(newHero.locX + ONESTEP, newHero.locY)) {
+      if (newHero.locX < MAP_TILES - ONE_STEP && newMap.checkObject(newHero.locX + ONE_STEP, newHero.locY)) {
         newHero.locX ++;
       }
       newHero.setImage(ImageLoader.getInstance().HERO_RIGHT);
