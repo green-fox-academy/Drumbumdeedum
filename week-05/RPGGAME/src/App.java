@@ -45,22 +45,22 @@ public class App extends JComponent implements KeyListener {
   @Override
   public void keyReleased(KeyEvent e) {
     if (e.getKeyCode() == KeyEvent.VK_UP) {
-      if (newHero.locY >= ONE_STEP && newMap.checkObject(newHero.locX, newHero.locY - ONE_STEP)) {
+      if (newHero.locY >= ONE_STEP && !newMap.isWall(newHero.locX, newHero.locY - ONE_STEP)) {
         newHero.locY --;
       }
       newHero.setImage(ImageLoader.getInstance().HERO_UP);
     } else if(e.getKeyCode() == KeyEvent.VK_DOWN) {
-      if (newHero.locY < MAP_TILES - ONE_STEP && newMap.checkObject(newHero.locX, newHero.locY + ONE_STEP)) {
+      if (newHero.locY < MAP_TILES - ONE_STEP && !newMap.isWall(newHero.locX, newHero.locY + ONE_STEP)) {
         newHero.locY ++;
       }
       newHero.setImage(ImageLoader.getInstance().HERO_DOWN);
     } else if(e.getKeyCode() == KeyEvent.VK_LEFT) {
-      if (newHero.locX >= ONE_STEP && newMap.checkObject(newHero.locX - ONE_STEP, newHero.locY)) {
+      if (newHero.locX >= ONE_STEP && !newMap.isWall(newHero.locX - ONE_STEP, newHero.locY)) {
         newHero.locX --;
       }
       newHero.setImage(ImageLoader.getInstance().HERO_LEFT);
     } else if(e.getKeyCode() == KeyEvent.VK_RIGHT) {
-      if (newHero.locX < MAP_TILES - ONE_STEP && newMap.checkObject(newHero.locX + ONE_STEP, newHero.locY)) {
+      if (newHero.locX < MAP_TILES - ONE_STEP && !newMap.isWall(newHero.locX + ONE_STEP, newHero.locY)) {
         newHero.locX ++;
       }
       newHero.setImage(ImageLoader.getInstance().HERO_RIGHT);
