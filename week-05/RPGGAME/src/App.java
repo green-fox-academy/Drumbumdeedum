@@ -4,8 +4,9 @@ import javax.swing.*;
 import java.awt.*;
 
 public class App extends JComponent implements KeyListener {
-  final static int SIZE = 72;
   final static int MAPSIZE = 720;
+  final static int ONESTEP = 1;
+  final static int MAPTILES = 10;
   GameArea newMap;
   Hero newHero;
 
@@ -44,23 +45,23 @@ public class App extends JComponent implements KeyListener {
   @Override
   public void keyReleased(KeyEvent e) {
     if (e.getKeyCode() == KeyEvent.VK_UP) {
-      if (newHero.locY >= SIZE) {
-        newHero.locY -= SIZE;
+      if (newHero.locY >= ONESTEP && newMap.checkObject(newHero.locX, newHero.locY - ONESTEP)) {
+        newHero.locY --;
       }
       newHero.setImage(ImageLoader.getInstance().HERO_UP);
     } else if(e.getKeyCode() == KeyEvent.VK_DOWN) {
-      if (newHero.locY < MAPSIZE - SIZE) {
-        newHero.locY += SIZE;
+      if (newHero.locY < MAPTILES - ONESTEP && newMap.checkObject(newHero.locX, newHero.locY + ONESTEP)) {
+        newHero.locY ++;
       }
       newHero.setImage(ImageLoader.getInstance().HERO_DOWN);
     } else if(e.getKeyCode() == KeyEvent.VK_LEFT) {
-      if (newHero.locX >= SIZE) {
-        newHero.locX -= SIZE;
+      if (newHero.locX >= ONESTEP && newMap.checkObject(newHero.locX - ONESTEP, newHero.locY)) {
+        newHero.locX --;
       }
       newHero.setImage(ImageLoader.getInstance().HERO_LEFT);
     } else if(e.getKeyCode() == KeyEvent.VK_RIGHT) {
-      if (newHero.locX < MAPSIZE - SIZE) {
-        newHero.locX += SIZE;
+      if (newHero.locX < MAPTILES - ONESTEP && newMap.checkObject(newHero.locX + ONESTEP, newHero.locY)) {
+        newHero.locX ++;
       }
       newHero.setImage(ImageLoader.getInstance().HERO_RIGHT);
     }

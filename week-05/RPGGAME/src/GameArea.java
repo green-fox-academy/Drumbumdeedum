@@ -2,8 +2,8 @@ import java.awt.Graphics;
 import java.util.ArrayList;
 
 public class GameArea {
+
   ArrayList<int[]> wallMap;
-  final static int SIZE = 72;
 
   public GameArea() {
     wallMap = new ArrayList<>();
@@ -33,13 +33,21 @@ public class GameArea {
     for (int i=0; i < 10; i += 1) {
       for (int j=0; j < 10; j += 1) {
         if (this.wallMap.get(j)[i] == 1) {
-          Wall newObject = new Wall(i * SIZE, j * SIZE);
+          Wall newObject = new Wall(i, j);
           newObject.drawGameObject(graphics);
         } else {
-          Floor newObject = new Floor( i * SIZE, j * SIZE);
+          Floor newObject = new Floor( i, j);
           newObject.drawGameObject(graphics);
         }
       }
+    }
+  }
+
+  public boolean checkObject(int x, int y) {
+    if (wallMap.get(y)[x] == 0) {
+      return true;
+    } else {
+      return false;
     }
   }
 }
