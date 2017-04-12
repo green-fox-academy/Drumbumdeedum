@@ -6,11 +6,11 @@ public class Hud {
 
   public static void drawHud(Graphics g, int x, int y) {
     fillBackGround(g, x, y);
-    g.setColor(Color.black);
+    g.setColor(Color.white);
   }
 
   private static void fillBackGround(Graphics g, int x, int y) {
-    g.setColor(Color.white);
+    g.setColor(Color.black);
     g.fillRect(x, y - HEIGHT, 720, HEIGHT);
   }
 }
