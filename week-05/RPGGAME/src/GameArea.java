@@ -1,19 +1,18 @@
 import java.awt.Graphics;
-import java.util.ArrayList;
 
 public class GameArea {
   int[][] wallMap;
   int[][] newGameArea = {
-    {0, 0, 0, 1, 0, 0, 0, 0, 0, 0},
-    {0, 0, 0, 1, 0, 1, 0, 0, 0, 0},
-    {0, 0, 0, 1, 0, 1, 1, 1, 1, 0},
-    {0, 1, 1, 1, 0, 0, 0, 1, 0, 0},
-    {0, 0, 0, 0, 0, 1, 0, 1, 0, 0},
-    {1, 1, 1, 0, 1, 1, 0, 0, 0, 0},
-    {0, 0, 0, 0, 0, 0, 0, 1, 1, 0},
-    {0, 1, 1, 0, 1, 1, 0, 1, 0, 0},
-    {0, 1, 1, 0, 0, 1, 0, 1, 0, 0},
-    {0, 0, 0, 0, 0, 1, 0, 0, 0, 0}
+      {9, 0, 0, 1, 0, 0, 0, 0, 0, 0},
+      {0, 0, 0, 1, 0, 1, 0, 0, 0, 0},
+      {0, 0, 0, 1, 0, 1, 1, 1, 1, 0},
+      {0, 1, 1, 1, 0, 0, 0, 1, 0, 0},
+      {0, 0, 0, 0, 0, 1, 0, 1, 0, 0},
+      {1, 1, 1, 0, 1, 1, 0, 0, 0, 0},
+      {0, 0, 0, 0, 0, 0, 0, 1, 1, 0},
+      {0, 1, 1, 0, 1, 1, 0, 1, 0, 0},
+      {0, 1, 1, 0, 0, 1, 0, 1, 0, 0},
+      {0, 0, 0, 0, 0, 1, 0, 0, 0, 0}
   };
 
   public GameArea() {
@@ -26,7 +25,17 @@ public class GameArea {
         if (this.wallMap[j][i] == 1) {
           Wall newObject = new Wall(i, j);
           newObject.drawGameObject(graphics);
-        } else {
+        } else if (this.wallMap[j][i] == 3) {
+          Floor newObject = new Floor(i, j);
+          newObject.drawGameObject(graphics);
+          Boss newBoss = new Boss(i, j);
+          newBoss.drawGameObject(graphics);
+        } else if (this.wallMap[j][i] == 4) {
+          Floor newObject = new Floor(i, j);
+          newObject.drawGameObject(graphics);
+          Skeleton newSkeleton = new Skeleton(i, j);
+          newSkeleton.drawGameObject(graphics);
+        } else if (this.wallMap[j][i] == 0 || this.wallMap[j][i] == 9) {
           Floor newObject = new Floor(i, j);
           newObject.drawGameObject(graphics);
         }

@@ -1,3 +1,4 @@
-public class Monsters extends GameObject {
+public class Monsters extends Characters {
+
 
 }

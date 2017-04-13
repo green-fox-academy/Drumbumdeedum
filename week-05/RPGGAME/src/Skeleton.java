@@ -1,12 +1,12 @@
 public class Skeleton extends Monsters {
-  RandomNumber rnd;
 
-  int x = rnd.ranNum();
-  int y = rnd.ranNum();
-
-  public Skeleton() {
+  public Skeleton(int x, int y) {
+    this.locX = x;
+    this.locY = y;
+    mapID = 4;
     image = ImageLoader.getInstance().SKELETON;
-    locX = x;
-    locY = y;
+    HP = 2 * (dice.ranNum(1, 6));
+    DP = 2 * (dice.ranNum(1, 6));
+    SP = (dice.ranNum(1, 6));
   }
 }
