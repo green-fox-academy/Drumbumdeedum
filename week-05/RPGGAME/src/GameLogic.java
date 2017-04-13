@@ -71,28 +71,4 @@ public class GameLogic {
       newHero.setImage(ImageLoader.getInstance().HERO_RIGHT);
     }
   }
-
-  public void drawArea(Graphics graphics) {
-    for (int i=0; i < 10; i += 1) {
-      for (int j=0; j < 10; j += 1) {
-        if (this.wallMap.newGameArea[j][i] == 1) {
-          Wall newObject = new Wall(i, j);
-          newObject.drawGameObject(graphics);
-        } else if (this.wallMap.newGameArea[j][i] == 3) {
-          Floor newObject = new Floor(i, j);
-          newObject.drawGameObject(graphics);
-          Boss newBoss = new Boss(i, j);
-          newBoss.drawGameObject(graphics);
-        } else if (this.wallMap.newGameArea[j][i] == 4) {
-          Floor newObject = new Floor(i, j);
-          newObject.drawGameObject(graphics);
-          Skeleton newSkeleton = new Skeleton(i, j);
-          newSkeleton.drawGameObject(graphics);
-        } else if (this.wallMap.newGameArea[j][i] == 0 || this.wallMap.newGameArea[j][i] == 9) {
-          Floor newObject = new Floor(i, j);
-          newObject.drawGameObject(graphics);
-        }
-      }
-    }
-  }
 }
