@@ -9,7 +9,6 @@ public class Board extends JComponent implements KeyListener {
   final static int HUD_SIZE = 110;
   GameLogic newGame;
 
-
   public Board() {
     setPreferredSize(new Dimension(MAP_SIZE, MAP_SIZE + HUD_SIZE));
     setVisible(true);

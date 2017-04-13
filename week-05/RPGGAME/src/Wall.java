@@ -7,4 +7,3 @@ public class Wall extends GameObject {
     this.locY = y;
   }
 }
-
