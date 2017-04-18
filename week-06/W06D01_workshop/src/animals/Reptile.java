@@ -1,3 +1,5 @@
+package animals;
+
 public class Reptile extends Animal implements Egg {
 
   public Reptile(String name) {
