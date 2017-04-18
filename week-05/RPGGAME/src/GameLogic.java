@@ -11,33 +11,49 @@ public class GameLogic {
   Hud newHud;
 
   public GameLogic() {
-    wallMap = new GameArea();
+    int[][] newGameArea = {
+        {9, 1, 0, 0, 0, 0, 1, 0, 0, 0},
+        {0, 1, 0, 1, 1, 0, 1, 0, 1, 0},
+        {0, 1, 0, 1, 0, 0, 1, 0, 1, 0},
+        {0, 1, 0, 1, 0, 1, 1, 0, 1, 0},
+        {0, 1, 0, 1, 0, 1, 0, 0, 1, 0},
+        {0, 1, 0, 1, 0, 0, 0, 1, 1, 0},
+        {0, 0, 0, 1, 1, 1, 0, 1, 0, 0},
+        {0, 1, 0, 0, 0, 1, 0, 1, 0, 1},
+        {0, 1, 1, 1, 1, 1, 0, 1, 0, 1},
+        {0, 0, 0, 0, 0, 0, 0, 1, 0, 0}
+    };
+
+    wallMap = new GameArea(newGameArea);
     newHud = new Hud();
     newHero = new Hero();
 
-    int numberOfSkeletons = 0;
-    int randomLocX = (int)(Math.random()*9);
-    int randomLocY = (int)(Math.random()*9);
-    while (numberOfSkeletons < 3) {
-      if (wallMap.newGameArea[randomLocX][randomLocY] != 0) {
-        randomLocX = (int)(Math.random()*9);
-        randomLocY = (int)(Math.random()*9);
-      } else if (wallMap.newGameArea[randomLocX][randomLocY] == 0) {
-        wallMap.newGameArea[randomLocX][randomLocY] = 4;
-        numberOfSkeletons ++;
-      }
-    }
+    wallMap.wallMap[9][9] = 3;
 
-    int bossNr = 0;
-    while (bossNr < 1) {
-      if (wallMap.newGameArea[randomLocX][randomLocY] != 0) {
-        randomLocX = (int)(Math.random()*9);
-        randomLocY = (int)(Math.random()*9);
-      } else if (wallMap.newGameArea[randomLocX][randomLocY] == 0) {
-        wallMap.newGameArea[randomLocX][randomLocY] = 3;
-        bossNr ++;
-      }
-    }
+//    int numberOfSkeletons = 0;
+//    int randomLocX = (int)(Math.random()*9);
+//    int randomLocY = (int)(Math.random()*9);
+//    while (numberOfSkeletons < 3) {
+//      if (wallMap.wallMap[randomLocX][randomLocY] != 0) {
+//        randomLocX = (int)(Math.random()*9);
+//        randomLocY = (int)(Math.random()*9);
+//      } else if (wallMap.wallMap[randomLocX][randomLocY] == 0) {
+//        wallMap.wallMap[randomLocX][randomLocY] = 4;
+//        numberOfSkeletons ++;
+//      }
+//    }
+//
+//    int bossNr = 0;
+//    while (bossNr < 1) {
+//      if (wallMap.wallMap[randomLocX][randomLocY] != 0) {
+//        randomLocX = (int)(Math.random()*9);
+//        randomLocY = (int)(Math.random()*9);
+//      } else if (wallMap.wallMap[randomLocX][randomLocY] == 0) {
+//        wallMap.wallMap[randomLocX][randomLocY] = 3;
+//        bossNr ++;
+//      }
+//    }
+    
   }
 
   public void start(Graphics graphics) {
@@ -51,24 +67,24 @@ public class GameLogic {
       if (newHero.locY >= ONE_STEP && !wallMap.isWall(newHero.locX, newHero.locY - ONE_STEP)) {
         newHero.locY--;
       }
-      newHero.setImage(ImageLoader.getInstance().HERO_UP);
+      //newHero.setImage(ImageLoader.getInstance().HERO_UP);
     } else if (e.getKeyCode() == KeyEvent.VK_DOWN) {
       if (newHero.locY < MAP_TILES - ONE_STEP && !wallMap
           .isWall(newHero.locX, newHero.locY + ONE_STEP)) {
         newHero.locY++;
       }
-      newHero.setImage(ImageLoader.getInstance().HERO_DOWN);
+      //newHero.setImage(ImageLoader.getInstance().HERO_DOWN);
     } else if (e.getKeyCode() == KeyEvent.VK_LEFT) {
       if (newHero.locX >= ONE_STEP && !wallMap.isWall(newHero.locX - ONE_STEP, newHero.locY)) {
         newHero.locX--;
       }
-      newHero.setImage(ImageLoader.getInstance().HERO_LEFT);
+      //newHero.setImage(ImageLoader.getInstance().HERO_LEFT);
     } else if (e.getKeyCode() == KeyEvent.VK_RIGHT) {
       if (newHero.locX < MAP_TILES - ONE_STEP && !wallMap
           .isWall(newHero.locX + ONE_STEP, newHero.locY)) {
         newHero.locX++;
       }
-      newHero.setImage(ImageLoader.getInstance().HERO_RIGHT);
+      //newHero.setImage(ImageLoader.getInstance().HERO_RIGHT);
     }
   }
 }

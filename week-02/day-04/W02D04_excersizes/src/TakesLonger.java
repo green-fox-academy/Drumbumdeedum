@@ -1,10 +1,9 @@
 /**
  * Created by danielszalay on 2017. 03. 23..
  */
-// When saving this quote a disk error has occured. Please fix it.
+// When saving this quote a disk error has occurred. Please fix it.
 // Add "always takes longer than" to the StringBuilder (quote) between the words "It" and "you"
 // Using pieces of the quote variable (instead of just redefining the string)
-
 
 public class TakesLonger {
   public static void main(String... args){

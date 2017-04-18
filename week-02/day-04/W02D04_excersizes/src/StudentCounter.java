@@ -55,7 +55,7 @@ public class StudentCounter{
 
   for (int i = 0; i < length; i++) {
 
-    int numberOfCandies = ( Integer ) map.get(i).get("candies");
+    int numberOfCandies = (Integer) map.get(i).get("candies");
     Object objectTypeName = map.get(i).get("name");
     String stringTypeName = objectTypeName.toString();
 
@@ -68,7 +68,7 @@ public class StudentCounter{
 
   for (int i = 0; i < length; i++) {
 
-    int numberOfCandies = ( Integer ) map.get(i).get("candies");
+    int numberOfCandies = (Integer) map.get(i).get("candies");
     Double ageOfChildren = new Double(map.get(i).get("age").toString());
 
     if (numberOfCandies < 5) {

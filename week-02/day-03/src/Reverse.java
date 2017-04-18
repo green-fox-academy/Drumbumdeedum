@@ -11,7 +11,7 @@ import java.util.Arrays;
 public class Reverse {
   public static void main(String[] args) {
     int[] aj = {3, 4, 5, 6, 7};
-    int[] reverse_aj = new int [5];
+    int[] reverse_aj = new int [aj.length];
 
     for (int x = aj.length-1; x >= 0 ; x--) {
       reverse_aj[reverse_aj.length-x-1] = aj[x];

@@ -25,6 +25,5 @@ public class Doubled {
     } catch (Exception e) {
       System.out.println("Uh-oh, an error happend: " + e.getClass());
     }
-
   }
 }

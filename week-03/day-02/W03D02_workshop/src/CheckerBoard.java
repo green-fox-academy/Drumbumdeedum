@@ -9,53 +9,26 @@ public class CheckerBoard {
   public static void mainDraw(Graphics graphics){
     // fill the canvas with a checkerboard pattern.
 
-    /*for (int i=0; i < 8; i +=2) {
-      graphics.setColor(new Color(0, 0, 0, 255));
-      graphics.fillRect(40 * i, 40*i, 40, 40);
+    int tileSize = 20;
+    int rowsAndColumns = 16;
 
-      graphics.setColor(new Color(0, 0, 0, 255));
-      graphics.fillRect(40 * (i+1), 40*(i+1), 40, 40);
-    }*/
+    for (int j=0; j < tileSize*rowsAndColumns; j+=tileSize*2) {
 
-
-    for (int i=0; i < 8; i +=2) {
-      graphics.setColor(new Color(0,0,0, 255));
-      graphics.fillRect(40*i, 0, 40 , 40);
-    }
-    for (int i=0; i < 8; i +=2) {
-      graphics.setColor(new Color(0,0,0, 255));
-      graphics.fillRect(40*(i+1), 40, 40 , 40);
-    }
-    for (int i=0; i < 8; i +=2) {
-      graphics.setColor(new Color(0,0,0, 255));
-      graphics.fillRect(40*i, 80, 40 , 40);
-    }
-    for (int i=0; i < 8; i +=2) {
-      graphics.setColor(new Color(0,0,0, 255));
-      graphics.fillRect(40*(i+1), 120, 40 , 40);
-    }
-    for (int i=0; i < 8; i +=2) {
-      graphics.setColor(new Color(0,0,0, 255));
-      graphics.fillRect(40*i, 160, 40 , 40);
-    }
-    for (int i=0; i < 8; i +=2) {
-      graphics.setColor(new Color(0,0,0, 255));
-      graphics.fillRect(40*(i+1), 200, 40 , 40);
-    }
-    for (int i=0; i < 8; i +=2) {
-      graphics.setColor(new Color(0,0,0, 255));
-      graphics.fillRect(40*i, 240, 40 , 40);
-    }
-    for (int i=0; i < 8; i +=2) {
-      graphics.setColor(new Color(0,0,0, 255));
-      graphics.fillRect(40*(i+1), 280, 40 , 40);
+      for (int i = 0; i < rowsAndColumns; i += 2) {
+        graphics.setColor(new Color(0, 0, 0, 255));
+        graphics.fillRect(tileSize * i, j, tileSize, tileSize);
+      }
+      for (int i = 0; i < rowsAndColumns; i += 2) {
+        graphics.setColor(new Color(0, 0, 0, 255));
+        graphics.fillRect(tileSize * (i + 1), j+tileSize, tileSize, tileSize);
+      }
     }
   }
 
   //    Don't touch the code below
   public static void main(String[] args) {
     JFrame jFrame = new JFrame("Drawing");
-    jFrame.setSize(new Dimension(320, 320));
+    jFrame.setSize(new Dimension(320, 340));
     jFrame.setDefaultCloseOperation(EXIT_ON_CLOSE);
     jFrame.add(new ImagePanel());
     jFrame.setLocationRelativeTo(null);
@@ -69,5 +42,4 @@ public class CheckerBoard {
 
     }
   }
-
 }

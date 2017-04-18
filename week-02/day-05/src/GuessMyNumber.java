@@ -21,10 +21,10 @@ public class GuessMyNumber {
     System.out.println("I will pick a number between " + firstNumber + " and " + secondNumber + " and you will have a total of " + livesRemaining + " lives.");
     System.out.println("Great! Now let's play! Guess the number!");
 
-    int randomNumber = (int)(Math.random()* ((secondNumber - firstNumber) + 1) + firstNumber);
+    int randomNumber = (int)(Math.random()* ((secondNumber - firstNumber)+1) + firstNumber);
 
     // randomNumber helper: displays randomNumber for testing purposes.
-    // System.out.println("\n/Helper: the random number is: " + randomNumber +"/");
+    // System.out.println("\n/Helper: the random number is: " + randomNumber + "/");
 
     boolean guessed = false;
 

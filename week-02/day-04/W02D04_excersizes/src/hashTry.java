@@ -14,7 +14,6 @@ public class hashTry {
     System.out.println(getKeyFromValue(map,"four"));
   }
 
-
   public static Object getKeyFromValue(HashMap inputHashmap, Object value) {
     for (Object o : inputHashmap.keySet()) {
       if (inputHashmap.get(o).equals(value)) {

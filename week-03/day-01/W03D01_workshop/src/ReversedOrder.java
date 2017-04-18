@@ -13,7 +13,6 @@ public class ReversedOrder {
       int lineCount = 0;
       HashMap <Integer, String> lineMap = new HashMap<Integer, String>();
 
-
       for (String line : Files.readAllLines(Paths.get("reversed-order.txt"))) {
         lineCount += 1;
         lineMap.put(lineCount, line);

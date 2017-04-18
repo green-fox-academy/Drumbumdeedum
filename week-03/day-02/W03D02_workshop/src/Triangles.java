@@ -7,14 +7,14 @@ public class Triangles {
   public static void mainDraw(Graphics graphics){
 
     // Where should the top of the big triangle be?
-    int centerX = 725;
+    int centerX = 325;
     int centerY = 30;
 
     // What should the length of the small triangles sides be?
     int triangleSide = 10;
 
     // How many rows of small triangles should the big triangle have?
-    int triangleRows = 100;
+    int triangleRows = 60;
 
     int sideHalf = triangleSide /2;
     Double sideDouble = triangleSide*Math.sqrt(3)/2;
@@ -29,7 +29,7 @@ public class Triangles {
   //    Don't touch the code below
   public static void main(String[] args) {
     JFrame jFrame = new JFrame("Drawing");
-    jFrame.setSize(new Dimension(300, 320));
+    jFrame.setSize(new Dimension(650, 620));
     jFrame.setDefaultCloseOperation(EXIT_ON_CLOSE);
     jFrame.add(new ImagePanel());
     jFrame.setLocationRelativeTo(null);

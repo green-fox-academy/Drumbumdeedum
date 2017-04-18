@@ -10,11 +10,7 @@ public class ConditionalVariableMutation {
       out += 1;
     }
 
-
     System.out.println(out);
-
-
-
 
     int b = 9;
     String out2 = "";
@@ -30,8 +26,6 @@ public class ConditionalVariableMutation {
     }
 
     System.out.println(out2);
-
-
 
     int c = 123;
     int credits = 100;
@@ -50,9 +44,6 @@ public class ConditionalVariableMutation {
     }
 
     System.out.println(c);
-
-
-
 
     int d = 8;
     int time = 120;

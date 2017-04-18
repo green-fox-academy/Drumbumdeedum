@@ -15,13 +15,13 @@ public class ParametricAverage {
     int random = (int)(Math.random()* 10 + 5);
     int a = random;
     int total = 0;
-    int userInt = 0;
+    int userInt;
     while (a > 0) {
       Scanner scanner = new Scanner(System.in);
       System.out.println("Please enter a number!");
       userInt = scanner.nextInt();
       total = total + userInt;
-    a -= 1;
+      a -= 1;
     }
     System.out.println("Sum: " + total + " Average: " + total/random);
   }

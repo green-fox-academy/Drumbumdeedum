@@ -26,7 +26,7 @@ public class QuoteSwap{
     int length = list.size();
     String completeQuote = "";
 
-    for (int i = 1; i < length; i++) {
+    for (int i = 0; i < length; i++) {
       completeQuote = completeQuote + list.get(i) + " ";
     }
 

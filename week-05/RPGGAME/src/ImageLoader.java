@@ -13,10 +13,10 @@ public class ImageLoader {
       FLOOR = ImageIO.read(new File("assets/floor.png"));
       WALL = ImageIO.read(new File("assets/wall.png"));
       HERO_UP = ImageIO.read(new File("assets/hero-up.png"));
-      HERO_DOWN = ImageIO.read(new File("assets/hero-down.png"));
+      HERO_DOWN = ImageIO.read(new File("assets/nyanyi.png"));
       HERO_LEFT = ImageIO.read(new File("assets/hero-left.png"));
       HERO_RIGHT = ImageIO.read(new File("assets/hero-right.png"));
-      BOSS = ImageIO.read(new File("assets/boss.png"));
+      BOSS = ImageIO.read(new File("assets/kiscica.png"));
       SKELETON = ImageIO.read(new File("assets/skeleton.png"));
     } catch (IOException e) {
       e.printStackTrace();

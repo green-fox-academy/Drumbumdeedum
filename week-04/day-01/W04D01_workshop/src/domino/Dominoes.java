@@ -1,6 +1,4 @@
 package domino;
-
-import domino.Domino;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -10,10 +8,10 @@ public class Dominoes {
 
     System.out.println("  Original order: " + dominoes);
 
-    Domino tempDomino = new Domino(0, 0);
+    Domino tempDomino;
 
     for (int i = 0; i < dominoes.size(); i++) {
-      for (int j = i; j < dominoes.size(); j++) {
+      for (int j = 1; j < dominoes.size(); j++) {
         if (dominoes.get(i).getValues()[1] == dominoes.get(j).getValues()[0]) {
           tempDomino = dominoes.get(i + 1);
           dominoes.set(i + 1, dominoes.get(j));
@@ -21,9 +19,7 @@ public class Dominoes {
         }
       }
     }
-
     System.out.println("Rearranged order: " + dominoes);
-
   }
 
   static List<Domino> initializeDominoes() {

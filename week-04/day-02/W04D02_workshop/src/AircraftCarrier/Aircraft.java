@@ -43,6 +43,4 @@ public class Aircraft {
     System.out.println(("Type: " + this.getType() + ", Ammo: " + this.currentAmmo + ", Base Damage: " + this.baseDmg + ", All Damage: " + this.totalDmg));
     System.out.println();
   }
-
-
 }

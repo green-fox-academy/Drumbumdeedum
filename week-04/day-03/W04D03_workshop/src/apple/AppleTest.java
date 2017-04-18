@@ -4,9 +4,10 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 
 public class AppleTest {
+  Apple testApple = new Apple();
+
   @Test
   public void getApple() {
-    Apple apple1 = new Apple();
-    assertEquals("apple", apple1.getApple());
+    assertEquals("apple", testApple.getApple());
   }
 }

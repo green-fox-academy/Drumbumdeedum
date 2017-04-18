@@ -14,9 +14,10 @@
 
 public class TodoPrint {
   public static void main(String... args){
+    String myTodo = "My todo: ";
     String todoText = "- Buy milk\n";
 
-    todoText = (todoText.concat("- Download games\n")).concat("\t- Diablo");
+    todoText = (myTodo.concat("\n" + todoText.concat("- Download games" + "\n")).concat("\t" + "- Diablo"));
 
     System.out.println(todoText);
   }

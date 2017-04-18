@@ -14,7 +14,7 @@ public class SquareGrid {
     double color2 = 1;
     double color3 = 1;
 
-    drawRecursiveSquare(6, 400, 400, 300, 20, color1, color2, color3,  g);
+    drawRecursiveSquare(4, 400, 400, 300, 20, color1, color2, color3,  g);
   }
 
   public static void drawRecursiveSquare(int depth, double centerX, double centerY, double side, float lineWidth, double color1, double color2, double color3, Graphics g) {

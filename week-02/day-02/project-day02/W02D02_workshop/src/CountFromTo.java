@@ -28,7 +28,7 @@ public class CountFromTo {
       System.out.println("The second number should be bigger.");
     } else {
       int a = userInt1;
-      while (a < userInt2) {
+      while (a < userInt2+1) {
         System.out.println(a);
         a += 1;
       }

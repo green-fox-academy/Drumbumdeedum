@@ -1,7 +1,8 @@
 public class Power {
 
   public static void main(String[] args) {
-    toThePower(3,3);
+    System.out.println(toThePower(3,3));
+    System.out.println(toThePower(3,4));
     System.out.println(toThePower(3, 5));
   }
 

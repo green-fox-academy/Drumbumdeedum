@@ -3,8 +3,8 @@
  */
 public class SecondsInADay {
   public static void main(String[] args) {
-    int currentHours = 14;
-    int currentMinutes = 34;
+    int currentHours = 23;
+    int currentMinutes = 02;
     int currentSeconds = 42;
 
     // Write a program that prints the remaining seconds (as an integer) from a

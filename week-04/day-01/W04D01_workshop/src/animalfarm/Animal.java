@@ -2,8 +2,7 @@ package animalfarm;
 
 public class Animal {
   String name;
-  int hunger;
-  int thirst;
+  int hunger, thirst;
 
   public Animal(String name) {
     this.name = name;

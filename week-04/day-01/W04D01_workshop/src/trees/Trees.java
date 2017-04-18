@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.Map;
 import java.util.HashMap;
 
-
 public class Trees {
 
   public static void main(String[] args) {
@@ -55,7 +54,5 @@ public class Trees {
       System.out.println("\t" + "- leaf color: " + trees.get(i).get("leaf color"));
       System.out.println();
     }
-
-
   }
 }

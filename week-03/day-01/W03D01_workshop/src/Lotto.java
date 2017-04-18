@@ -77,13 +77,5 @@ public class Lotto {
       mapOfOrderedNumbers.put(mapOfNumbers.get(i), mapOfOrderedNumbers.get(mapOfNumbers.get(i))+1);
     }
     System.out.println(mapOfOrderedNumbers);
-
-
-    /*ArrayList<ArrayList<Integer>> dictionaryOfNumbers = new ArrayList<ArrayList<Integer>>();
-
-    for (int i = 1; i < 200; i++) {
-      dictionaryOfNumbers.add(i, new ArrayList<Integer>());
-    }*/
-
   }
 }

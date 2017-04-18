@@ -8,7 +8,9 @@ public class Hud {
   public static void drawHud(Graphics g, int x, int y, Characters hero) {
     fillBackGround(g, x, y);
     g.setColor(Color.white);
-    g.drawString(hero.currentStats, 15,  SIZE + 25);
+    if (hero.isAlive()) {
+      g.drawString(hero.currentStats, 15, SIZE + 25);
+    }
   }
 
   private static void fillBackGround(Graphics g, int x, int y) {

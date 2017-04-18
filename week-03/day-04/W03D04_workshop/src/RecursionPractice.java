@@ -29,7 +29,7 @@ public class RecursionPractice {
   }
 
   public static int countUp(int i) {
-    int j = i;
+    System.out.println(i);
     if (i == 1) {
       return 1;
     }

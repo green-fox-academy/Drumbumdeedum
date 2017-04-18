@@ -3,6 +3,7 @@ package fleetofthings;
 public class FleetOfThings {
 
   public static void main(String[] args) {
+
     Fleet fleet = new Fleet();
     // Create a fleet of things to have this output:
     // 1. [ ] Get milk
@@ -14,8 +15,10 @@ public class FleetOfThings {
     Thing obstacle = new Thing("Remove the obstacles");
     Thing standUp = new Thing("Stand up");
     Thing lunch = new Thing("Eat lunch");
+
     //milk.complete();
     //obstacle.complete();
+
     standUp.complete();
     lunch.complete();
 

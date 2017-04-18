@@ -21,8 +21,8 @@ public class Printer {
     printer2(argument1, argument2, argument3, argument4);
   }
 
-  public static void printer1(String[] parameters) {
-    for (String currentString: parameters) {
+  public static void printer1(String[] params) {
+    for (String currentString: params) {
       System.out.println(currentString);
     }
   }

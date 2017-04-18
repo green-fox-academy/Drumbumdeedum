@@ -12,6 +12,7 @@ public class RecursiveSquares {
       g.setColor(new Color(0,0,0,255));
       g.drawRect(0, 0, 600, 600);
 
+      lines(0,0,600, g);
 
       fractalize(0,0,600, g);
     }

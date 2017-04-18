@@ -24,9 +24,9 @@ public class MultiplicationTable {
     System.out.println("Please enter a number: ");
     int userInt = scanner.nextInt();
     int a = 1;
+    int aTimesUserInt = a * userInt;
     while (a <= 10) {
-      int aTimesUserInt = a * userInt;
-      System.out.println(a + " * " + userInt + " = " + aTimesUserInt);
+      System.out.println(a + " * " + userInt + " = " + aTimesUserInt * a);
       a += 1;
     }
   }

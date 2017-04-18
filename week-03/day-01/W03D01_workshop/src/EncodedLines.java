@@ -26,7 +26,6 @@ public class EncodedLines {
               encoded = encoded + letter;
             }
           }
-
           System.out.println(encoded);
         }
       }

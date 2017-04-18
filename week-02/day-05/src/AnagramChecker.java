@@ -37,9 +37,9 @@ public class AnagramChecker {
     int word2Length = sorted2.length();
 
     if (sorted1.equals(sorted2) == true && word1Length == word2Length) {
-      System.out.println("It's and annagram!");
+      System.out.println("It's and anagram!");
     } else if (sorted1.equals(sorted2) == false && word1Length == word2Length) {
-      System.out.println("It's not and annagram!");
+      System.out.println("It's not and anagram!");
     } else {
       System.out.println("The words should have the same amount of letters!");
     }

@@ -14,6 +14,7 @@ public class String1 {
     if (lastLetter.equals("x")) {
       lastLetter = "y";
     }
+
     if (word.length() > 1) {
       return changeXtoY(stringMinusN) + lastLetter;
     }

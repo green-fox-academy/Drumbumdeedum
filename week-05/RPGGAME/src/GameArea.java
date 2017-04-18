@@ -2,21 +2,9 @@ import java.awt.Graphics;
 
 public class GameArea {
   int[][] wallMap;
-  int[][] newGameArea = {
-      {9, 0, 0, 1, 0, 0, 0, 0, 0, 0},
-      {0, 0, 0, 1, 0, 1, 0, 0, 0, 0},
-      {0, 0, 0, 1, 0, 1, 1, 1, 1, 0},
-      {0, 1, 1, 1, 0, 0, 0, 1, 0, 0},
-      {0, 0, 0, 0, 0, 1, 0, 1, 0, 0},
-      {1, 1, 1, 0, 1, 1, 0, 0, 0, 0},
-      {0, 0, 0, 0, 0, 0, 0, 1, 1, 0},
-      {0, 1, 1, 0, 1, 1, 0, 1, 0, 0},
-      {0, 1, 1, 0, 0, 1, 0, 1, 0, 0},
-      {0, 0, 0, 0, 0, 1, 0, 0, 0, 0}
-  };
 
-  public GameArea() {
-    wallMap = newGameArea;
+  public GameArea(int[][] area) {
+    wallMap = area;
   }
 
   public void drawArea(Graphics graphics) {

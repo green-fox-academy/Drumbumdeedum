@@ -24,7 +24,7 @@ public class HeWillNever {
     hmap.put(11, "\n");
     hmap.put(3, "say goodbye");
 
-    for (int i = 0; i < 16; i++) {
+    for (int i = 0; i < notSoCrypticMessage.length; i++) {
       out = out + hmap.get(notSoCrypticMessage[i]) + " ";
     }
     System.out.println(out);

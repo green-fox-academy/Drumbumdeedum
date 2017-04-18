@@ -2,6 +2,10 @@ package fibonacci;
 
 public class Fibonacci {
 
+  public Fibonacci() {
+
+  }
+
   public int fibonacciN(int input) {
     if (input < 1) {
       return 0;

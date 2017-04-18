@@ -18,32 +18,17 @@ public class Dice {
     return dices[i];
   }
 
-  public void reroll() {
-    for (int i = 0; i < dices.length; i++) {
-      dices[i] = (int) (Math.random() * 6) + 1;
-    }
-  }
-
-  public void reroll(int k) {
+  public void reRoll(int k) {
     dices[k] = (int) (Math.random() * 6) + 1;
   }
 
   public static void main(String[] args) {
     Dice myDice = new Dice();
-    myDice.getCurrent();
     myDice.roll();
 
-    int sumTotalRoll = 0;
-
-    for (int i=0; i < 36; i++) {
-      sumTotalRoll = 0;
-      for (int j=0; j < myDice.getCurrent().length; j++) {
-        if (myDice.getCurrent(j) != 6) {
-          myDice.reroll(j);
-        }
-        else {
-          sumTotalRoll += myDice.getCurrent(j);
-        }
+    for (int j=0; j < myDice.getCurrent().length; j++) {
+      while (myDice.getCurrent(j) != 6) {
+        myDice.reRoll(j);
       }
     }
 
