@@ -49,10 +49,10 @@ public class ParkingLot {
     HashMap<String, Integer> colorTypeMap = new HashMap<>();
 
     for (int i=0; i < lotSize(); i++) {
-      if (colorTypeMap.containsKey(getCarInLot(i))) {
-        colorTypeMap.replace(getCarInLot(i), colorTypeMap.get(getCarInLot(i)) + 1);
+      if (colorTypeMap.containsKey(getCarInLotString(i))) {
+        colorTypeMap.replace(getCarInLotString(i), colorTypeMap.get(getCarInLotString(i)) + 1);
       } else {
-        colorTypeMap.put(getCarInLot(i), 1);
+        colorTypeMap.put(getCarInLotString(i), 1);
       }
     }
     return colorTypeMap;
@@ -63,9 +63,9 @@ public class ParkingLot {
     int bufferFrequency = 0;
 
     for (int i=0; i < lotSize(); i++) {
-      if (this.colorAndType().containsKey(getCarInLot(i)) && (this.colorAndType().get(getCarInLot(i))) > bufferFrequency) {
-        mostCommon = getCarInLot(i);
-        bufferFrequency = (this.colorAndType().get(getCarInLot(i)));
+      if (this.colorAndType().containsKey(getCarInLotString(i)) && (this.colorAndType().get(getCarInLotString(i))) > bufferFrequency) {
+        mostCommon = getCarInLotString(i);
+        bufferFrequency = (this.colorAndType().get(getCarInLotString(i)));
       }
     }
     return mostCommon;
@@ -75,7 +75,7 @@ public class ParkingLot {
     return this.carsInLot.get(index);
   }
 
-  public String getCarInLot(int index) {
+  public String getCarInLotString(int index) {
     return this.carsInLot.get(index).toString();
   }
 
