@@ -1,4 +1,4 @@
-import main.java.music.*;
+package main.java.music;
 
 public class AppMusic {
 
