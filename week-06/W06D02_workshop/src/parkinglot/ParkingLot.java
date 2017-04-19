@@ -22,11 +22,11 @@ public class ParkingLot {
   public HashMap<TYPE, Integer> nrOfTypes() {
     HashMap<TYPE, Integer> typeMap = new HashMap<>();
 
-    for (int i=0; i < this.carsInLot.size(); i++) {
-      if (typeMap.containsKey(this.carsInLot.get(i).type)) {
-        typeMap.replace(this.carsInLot.get(i).type, typeMap.get(this.carsInLot.get(i).type) + 1);
+    for (int i=0; i < lotSize(); i++) {
+      if (typeMap.containsKey(getCar(i).type)) {
+        typeMap.replace(getCar(i).type, typeMap.get(getCar(i).type) + 1);
       } else {
-        typeMap.put(this.carsInLot.get(i).type, 1);
+        typeMap.put(getCar(i).type, 1);
       }
     }
     return typeMap;
@@ -35,11 +35,11 @@ public class ParkingLot {
   public HashMap<COLOR, Integer> nrOfColors() {
     HashMap<COLOR, Integer> colorMap = new HashMap<>();
 
-    for (int i=0; i < this.carsInLot.size(); i++) {
-      if (colorMap.containsKey(this.carsInLot.get(i).color)) {
-        colorMap.replace(this.carsInLot.get(i).color, colorMap.get(this.carsInLot.get(i).color) + 1);
+    for (int i=0; i < lotSize(); i++) {
+      if (colorMap.containsKey(getCar(i).color)) {
+        colorMap.replace(getCar(i).color, colorMap.get(getCar(i).color) + 1);
       } else {
-        colorMap.put(this.carsInLot.get(i).color, 1);
+        colorMap.put(getCar(i).color, 1);
       }
     }
     return colorMap;
@@ -48,11 +48,11 @@ public class ParkingLot {
   public HashMap<String, Integer> colorAndType() {
     HashMap<String, Integer> colorTypeMap = new HashMap<>();
 
-    for (int i=0; i < this.carsInLot.size(); i++) {
-      if (colorTypeMap.containsKey(this.carsInLot.get(i).toString())) {
-        colorTypeMap.replace(this.carsInLot.get(i).toString(), colorTypeMap.get(this.carsInLot.get(i).toString()) + 1);
+    for (int i=0; i < lotSize(); i++) {
+      if (colorTypeMap.containsKey(getCarInLot(i))) {
+        colorTypeMap.replace(getCarInLot(i), colorTypeMap.get(getCarInLot(i)) + 1);
       } else {
-        colorTypeMap.put(this.carsInLot.get(i).toString(), 1);
+        colorTypeMap.put(getCarInLot(i), 1);
       }
     }
     return colorTypeMap;
@@ -62,13 +62,25 @@ public class ParkingLot {
     String mostCommon = "";
     int bufferFrequency = 0;
 
-    for (int i=0; i < this.carsInLot.size(); i++) {
-      if (this.colorAndType().containsKey(this.carsInLot.get(i).toString()) && (this.colorAndType().get(this.carsInLot.get(i).toString())) > bufferFrequency) {
-        mostCommon = this.carsInLot.get(i).toString();
-        bufferFrequency = (this.colorAndType().get(this.carsInLot.get(i).toString()));
+    for (int i=0; i < lotSize(); i++) {
+      if (this.colorAndType().containsKey(getCarInLot(i)) && (this.colorAndType().get(getCarInLot(i))) > bufferFrequency) {
+        mostCommon = getCarInLot(i);
+        bufferFrequency = (this.colorAndType().get(getCarInLot(i)));
       }
     }
     return mostCommon;
+  }
+
+  public Car getCar(int index) {
+    return this.carsInLot.get(index);
+  }
+
+  public String getCarInLot(int index) {
+    return this.carsInLot.get(index).toString();
+  }
+
+  public int lotSize() {
+    return this.carsInLot.size();
   }
 
   public String toString() {
