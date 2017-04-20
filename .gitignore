@@ -5,4 +5,4 @@ out
 .DC_Store
 .gradle
 .properties
-/build/
+build/
