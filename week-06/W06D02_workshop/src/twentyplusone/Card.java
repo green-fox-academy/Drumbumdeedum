@@ -39,5 +39,4 @@ public class Card {
   public String toString() {
     return capitalToLower(rank.name()) + " of " + capitalToLower(suit.name());
   }
-
 }
