@@ -50,19 +50,7 @@ public class BirthdayWithLocalDate implements BirthdayCalculator<LocalDate> {
     if (birthday.isAfter(LocalDate.now())) {
       yearsPassed = 0;
     } else {
-      if (birthday.getMonthValue() == LocalDate.now().getMonthValue()) {
-        if (birthday.getDayOfMonth() == LocalDate.now().getDayOfMonth()) {
-          yearsPassed = (int)(ChronoUnit.YEARS.between(birthday, LocalDate.now()));
-        } else if (birthday.getDayOfMonth() < LocalDate.now().getDayOfMonth()) {
-          yearsPassed = (int)(ChronoUnit.YEARS.between(birthday, LocalDate.now()));
-        } else if (birthday.getDayOfMonth() > LocalDate.now().getDayOfMonth()) {
-          yearsPassed = (int)(ChronoUnit.YEARS.between(birthday, LocalDate.now()))-1;
-        }
-      } else if (birthday.getMonthValue() < LocalDate.now().getMonthValue()) {
-        yearsPassed = (int)(ChronoUnit.YEARS.between(birthday, LocalDate.now()));
-      } else if (birthday.getMonthValue() > LocalDate.now().getMonthValue()) {
-        yearsPassed = (int)(ChronoUnit.YEARS.between(birthday, LocalDate.now()))-1;
-      }
+      yearsPassed = (int)(ChronoUnit.YEARS.between(birthday, LocalDate.now()));
     }
 
     return yearsPassed;
