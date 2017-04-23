@@ -3,20 +3,20 @@ public class ArgumentHandler {
   public void handleArguments(String[] args) {
 
     Arguments argument = new Arguments(args);
-    ToDoList todoList = new ToDoList("todo.txt");
+    ToDoList todoList = new ToDoList("todo.csv");
 
     if (argument.noArguments()) {
       printUsageInformation();
     } else if (argument.isList()) {
       todoList.listToDos();
     } else if (argument.isAdd()) {
-      todoList.addTodo(argument.getCommand());
+      todoList.addTodo(argument.getIDNumber());
     } else if (argument.isRemove()) {
-      todoList.removeTodo(Integer.parseInt(argument.getCommand())-1);
+      todoList.removeTodo(Integer.parseInt(argument.getIDNumber()));
     } else if (argument.isComplete()) {
-      todoList.checkTodo(Integer.parseInt(argument.getCommand())-1);
+      todoList.checkTodo(Integer.parseInt(argument.getIDNumber()));
     } else if (argument.isUpdate()) {
-      System.out.println("update"); // work in progress
+      todoList.updateTodo(Integer.parseInt(argument.getIDNumber()), argument.getUpdateText());
     } else {
       System.out.println("No such command");
       printUsageInformation();
