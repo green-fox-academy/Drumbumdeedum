@@ -5,6 +5,7 @@ public class Arguments {
   private static final String REMOVE = "-r";
   private static final String COMPLETE = "-c";
   private static final String UPDATE = "-u";
+  private static final String COMPLETION = "-t";
 
   private String argument;
   private String IDNumber;
@@ -49,6 +50,10 @@ public class Arguments {
     return argument.equals(UPDATE);
   }
 
+  public boolean isCompletion() {
+    return argument.equals(COMPLETION);
+  }
+
   public String getIDNumber() {
     return IDNumber;
   }
@@ -56,4 +61,5 @@ public class Arguments {
   public String getUpdateText() {
     return updateText;
   }
+
 }

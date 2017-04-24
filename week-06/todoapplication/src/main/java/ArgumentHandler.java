@@ -17,6 +17,8 @@ public class ArgumentHandler {
       todoList.checkTodo(Integer.parseInt(argument.getIDNumber()));
     } else if (argument.isUpdate()) {
       todoList.updateTodo(Integer.parseInt(argument.getIDNumber()), argument.getUpdateText());
+    } else if (argument.isCompletion()) {
+      todoList.getCompletionTime(Integer.parseInt(argument.getIDNumber()));
     } else {
       System.out.println("No such command");
       printUsageInformation();
@@ -27,17 +29,18 @@ public class ArgumentHandler {
   public void printUsageInformation() {
     System.out.println(
       "\n" +
-      "*****************************\n" +
-      "* Java Todo application     *\n" +
-      "* =====================     *\n" +
-      "*                           *\n" +
-      "* Command line arguments:   *\n" +
-      "*  -l   Lists all the tasks *\n" +
-      "*  -a   Adds a new task     *\n" +
-      "*  -r   Removes a task      *\n" +
-      "*  -c   Completes a task    *\n" +
-      "*  -u   updates a task      *\n" +
-      "*****************************\n" +
+      "*******************************\n" +
+      "* Java Todo application       *\n" +
+      "* =====================       *\n" +
+      "*                             *\n" +
+      "* Command line arguments:     *\n" +
+      "*  -l   Lists all the tasks   *\n" +
+      "*  -a   Adds a new task       *\n" +
+      "*  -r   Removes a task        *\n" +
+      "*  -c   Completes a task      *\n" +
+      "*  -u   updates a task        *\n" +
+      "*  -t   show completion time  *\n" +
+      "*******************************\n" +
       "\n"
     );
   }

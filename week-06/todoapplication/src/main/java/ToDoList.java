@@ -44,6 +44,14 @@ public class ToDoList {
     }
   }
 
+  public void getCompletionTime(int index) {
+    for (int i=0; i < listOfToDos.size(); i++) {
+      if (listOfToDos.get(i).getID() == index && listOfToDos.get(i).getCompleted()) {
+        System.out.println("ToDo took " + listOfToDos.get(i).completionTime() + " day(s) to complete.");
+      }
+    }
+  }
+
   public void listToDos() {
     ArrayList<String[]> printToDoLines = new ArrayList<>();
     try {

@@ -37,8 +37,16 @@ public class ToDo {
     return this.ID;
   }
 
+  public boolean getCompleted() {
+    return this.completed;
+  }
+
   public void setCompleted() {
-    this.completed = true;
+    if (this.completed) {
+      this.completed = false;
+    } else {
+      this.completed = true;
+    }
   }
 
   public LocalDate getCreatedAt() {
