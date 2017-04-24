@@ -40,8 +40,7 @@ public class ArgumentHandler {
       "*  -c   Completes a task      *\n" +
       "*  -u   updates a task        *\n" +
       "*  -t   show completion time  *\n" +
-      "*******************************\n" +
-      "\n"
+      "*******************************\n"
     );
   }
 }

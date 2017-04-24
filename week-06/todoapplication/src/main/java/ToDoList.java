@@ -47,7 +47,9 @@ public class ToDoList {
   public void getCompletionTime(int index) {
     for (int i=0; i < listOfToDos.size(); i++) {
       if (listOfToDos.get(i).getID() == index && listOfToDos.get(i).getCompleted()) {
-        System.out.println("ToDo took " + listOfToDos.get(i).completionTime() + " day(s) to complete.");
+        System.out.println("To-Do took " + listOfToDos.get(i).completionTime() + " day(s) to complete.");
+      } else if (listOfToDos.get(i).getID() == index && !listOfToDos.get(i).getCompleted()) {
+        System.out.println("To-Do is not completed yet!");
       }
     }
   }
@@ -67,8 +69,8 @@ public class ToDoList {
       String ID  = todoLine[0] + " ";
       String completionStatus = todoLine[1].equals("FALSE") ? "[ ] ": "[X] ";
       String text = todoLine[2] + " ";
-      String createdAt = "\t To-Do created on: " + todoLine[3] + " ";
-      String completedAt = todoLine[1].equals("FALSE") ? "ToDo not completed yet" : "completed on: " + todoLine[4];
+      String createdAt = "\t\t To-Do created on: " + todoLine[3] + ", ";
+      String completedAt = todoLine[1].equals("FALSE") ? "To-Do not completed yet" : "completed on: " + todoLine[4];
       System.out.println("#ID: " + ID + completionStatus + text + createdAt + completedAt);
 
     }
