@@ -24,8 +24,10 @@ public class Game {
       } else if (choice == 2) {
         if (getHandValue() <= houseValue) {
           System.out.println("House wins with " + houseValue + " points.");
+          break;
         } else {
           System.out.println("You win with " + getHandValue() + " points, house had " + houseValue + " points.");
+          break;
         }
       } else if (choice == 3) {
         System.out.println("Top cards is a " + playingDeck.peek());
