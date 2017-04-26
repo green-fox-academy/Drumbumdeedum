@@ -17,7 +17,7 @@ public class SplitString {
 
   public static String[] split (String inputString, int splitIndex) {
     try {
-      List<String> splitStrings = new ArrayList<String>();
+      List<String> splitStrings = new ArrayList<>();
 
       splitStrings.add(inputString.substring(0, splitIndex));
       splitStrings.add(inputString.substring(splitIndex));
