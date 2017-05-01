@@ -15,7 +15,7 @@ public class Board {
   public Board(int row, int column) {
     randomMap = new RandomMap(column);
     randomMap.createRandomMap(row, column);
-    randomMap.countTiles();
+    //randomMap.countTiles();
 
     characterMap = new CharacterMap();
     characterMap.fillCharacterList(column, row, randomMap, level);

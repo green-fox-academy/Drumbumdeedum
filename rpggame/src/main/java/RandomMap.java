@@ -155,6 +155,7 @@ public class RandomMap {
     }
   }
 
+  @SuppressWarnings("unused")
   public void countTiles() {
     int nrOfFloorTiles = 0;
     int nrOfWallTiles = 0;
