@@ -5,9 +5,12 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 </head>
 <body>
-<!--/*@thymesVar id="hi" type="java"*/-->
-<tr th:each="e : ${hi}">
-  <td th:text="${e}"></td>
-</tr>
+<!--/*@thymesVar id="helloList" type="java"*/-->
+<span th:each="e : ${helloList}">
+  <!--/*@thymesVar id="getContent" type="java"*/-->
+  <!--/*@thymesVar id="getFontSize" type="java"*/-->
+  <!--/*@thymesVar id="getColor" type="java"*/-->
+  <span th:text="${e.getContent()}" th:style="'font-size: ' + ${e.getFontSize()} + 'px; color: ' + ${e.getColor()}"></span>
+</span>
 </body>
 </html>
