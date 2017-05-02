@@ -10,17 +10,11 @@ import java.util.List;
 public class App {
   
   public static void main(String[] args) {
-    String[] arg = {"-y", "2000", "-f", "otos.csv", "-o", "greenfox.csv"};
-
-    App newApp = new App(arg);
-  }
-
-  public App(String[] arguments) {
     OptionParser parser = new OptionParser();
     parser.accepts("y").withRequiredArg();
     parser.accepts("f").withRequiredArg();
     parser.accepts("o").withRequiredArg();
-    OptionSet options = parser.parse(arguments);
+    OptionSet options = parser.parse(args);
 
     if (!options.has("y")) {
       System.out.println("Year was not given for filtering");
