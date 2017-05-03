@@ -10,12 +10,14 @@ import org.springframework.web.bind.annotation.RestController;
 public class HelloRESTController {
 
   Greeting greeting;
-  private static final String GREET = "Hello, %s!";
+  private static final String GREET = "Hello %s!";
   private final AtomicLong counter = new AtomicLong();
 
   @RequestMapping(value = "/greeting")
-  public Greeting greeting(@RequestParam(value = "name", defaultValue = "World") String content) {
+  public String greeting(@RequestParam(value = "name", defaultValue = "Person") String content) {
     greeting = new Greeting(counter.incrementAndGet(), String.format(GREET, content));
-    return greeting;
+    String id = Long.toString(greeting.getId());
+
+    return "ID: " + id + ", Message: " + greeting.getContent();
   }
 }
