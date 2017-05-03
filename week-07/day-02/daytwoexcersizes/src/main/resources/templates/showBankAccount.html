@@ -7,10 +7,12 @@
 </head>
 <body>
 <!--/*@thymesVar id="accounts" type="java"*/-->
-<p th:each="e : ${accounts}">
-  <div th:text="'Name: ' + ${e.getName()}"/>
-  <div th:text="'Animal Type: ' + ${e.getAnimalType()}"/>
-  <div th:text="'Balance: ' + ${#numbers.formatDecimal(e.getBalance(),0,2)} + ' Zebras'"/>
+<p th:each="element, iterStat : ${accounts}" th:with="index=${iterStat.index}">
+  <div th:text="'Account ID: ' + ${index}"/>
+  <div th:text="'Name: ' + ${element.getName()}" th:if="${element.isKing()}" th:style="'color: #DAA520'"/>
+  <div th:text="'Name: ' + ${element.getName()}" th:if="${!element.isKing()}"/>
+  <div th:text="'Animal Type: ' + ${element.getAnimalType()}"/>
+  <div th:text="'Balance: ' + ${#numbers.formatDecimal(element.getBalance(),1,2)} + ' Zebras'"/>
 </p>
 </body>
 </html>
