@@ -3,9 +3,9 @@ package com.greenfoxacademy;
 public class HelloInLanguage {
   String content;
   String color;
-  String fontSize;
+  int fontSize;
 
-  public HelloInLanguage(String content, String color, String fontSize) {
+  public HelloInLanguage(String content, String color, int fontSize) {
     this.content = content;
     this.color = color;
     this.fontSize = fontSize;
@@ -15,7 +15,7 @@ public class HelloInLanguage {
     return this.content;
   }
 
-  public String getFontSize() {
+  public int getFontSize() {
     return this.fontSize;
   }
 

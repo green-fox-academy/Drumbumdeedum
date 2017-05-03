@@ -13,7 +13,7 @@ public class HelloAllWorldController {
   ArrayList<HelloInLanguage> helloList = new ArrayList<>();
 
   @RequestMapping("/greetWorld")
-  public String greetInLanguages(@RequestParam(value = "name", defaultValue = "everyone") String name, Model list) {
+  public String greetInLanguages(@RequestParam(value = "name", defaultValue = "everybody") String name, Model list) {
 
     for (String hello : hellos) {
       HelloInLanguage language = new HelloInLanguage(hello + " " + name + "! ", randomFontColor(), randomFontSize());
@@ -38,15 +38,8 @@ public class HelloAllWorldController {
     return color;
   }
 
-  public String randomFontSize() {
-    String firstNumber = "1234";
-    String secondNumber = "0123456789";
-    String number = "";
-    for (int i=0; i < 1; i++) {
-      number += firstNumber.charAt((int) (Math.random() * 4));
-      number += secondNumber.charAt((int) (Math.random() * 10));
-    }
-    return number;
+  public int randomFontSize() {
+    return (int)(Math.random()*30+20);
   }
 }
 
