@@ -5,33 +5,30 @@ import java.util.ArrayList;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class MultipleBankAccountsController {
 
-  BankAccount newAccount1;
-  BankAccount newAccount2;
-  BankAccount newAccount3;
-  BankAccount newAccount4;
-  BankAccount newAccount5;
-  BankAccount newAccount6;
-  ArrayList<BankAccount> accounts = new ArrayList<>();
+  ArrayList<BankAccount> accounts;
 
-  @RequestMapping("/Excersize5")
+
+  @RequestMapping("/Excersise5")
   public String initializeBankAccount(Model model) {
-    newAccount1 = new BankAccount("Simba", "lion", "2000", false, false);
-    newAccount2 = new BankAccount("Scar", "lion", "1000",false, true);
-    newAccount3 = new BankAccount("Mufasa", "lion", "2400", true, false);
-    newAccount4 = new BankAccount("Rafiki", "mandrill", "1",false, false);
-    newAccount5 = new BankAccount("Pumba", "warthog", "0",false, false);
-    newAccount6 = new BankAccount("Timon", "meerkat", "0",false, false);
-    accounts.add(newAccount1);
-    accounts.add(newAccount2);
-    accounts.add(newAccount3);
-    accounts.add(newAccount4);
-    accounts.add(newAccount5);
-    accounts.add(newAccount6);
+    accounts = new ArrayList<>();
+    accounts.add(new BankAccount("Simba", "lion", 2000, false, false));
+    accounts.add(new BankAccount("Scar", "lion", 1000,false, true));
+    accounts.add(new BankAccount("Mufasa", "lion", 2400, true, false));
+    accounts.add(new BankAccount("Rafiki", "mandrill", 1,false, false));
+    accounts.add(new BankAccount("Pumba", "warthog", 0,false, false));
+    accounts.add(new BankAccount("Timon", "meerkat", 0,false, false));
     model.addAttribute("accounts", accounts);
     return "showBankAccount";
+  }
+
+  @RequestMapping("/addZebras")
+  public String addZebras(@RequestParam(value = "index") String index) {
+    accounts.get(Integer.parseInt(index)).setBalance();
+    return "redirect:/Excersise5";
   }
 }

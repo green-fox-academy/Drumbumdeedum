@@ -14,7 +14,7 @@ public class BankAccountController {
 
   @RequestMapping("/Excersize1")
   public String initializeBankAccount(Model model) {
-    newAccount1 = new BankAccount("Simba", "lion", "2000", false, false);
+    newAccount1 = new BankAccount("Simba", "lion", 2000, false, false);
     accounts.add(newAccount1);
     model.addAttribute("accounts", accounts);
     return "showBankAccount";

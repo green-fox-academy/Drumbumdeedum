@@ -1,10 +1,11 @@
 package com.greenfoxacademy.springpractice.model;
 
 public class BankAccount {
-  String name, animalType, balance;
+  String name, animalType;
+  long balance;
   boolean isKing, isBadGuy;
 
-  public BankAccount(String name, String animalType, String balance, boolean isKing, boolean isBadGuy){
+  public BankAccount(String name, String animalType, long balance, boolean isKing, boolean isBadGuy){
     this.name = name;
     this.animalType = animalType;
     this.balance = balance;
@@ -20,8 +21,12 @@ public class BankAccount {
     return animalType;
   }
 
-  public String getBalance() {
+  public long getBalance() {
     return balance;
+  }
+
+  public void setBalance() {
+    this.balance += 10;
   }
 
   public boolean isKing() {

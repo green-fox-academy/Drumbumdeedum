@@ -7,9 +7,9 @@
 </head>
 <body>
   <!--/*@thymesVar id="test" type="java"*/-->
-  <p th:utext="'Unescaped version: '"></p>
+  <p th:text="'Unescaped version: '"></p>
   <p th:utext="${test}"></p>
-  <p th:utext="'Escaped version: '"></p>
+  <p th:text="'Escaped version: '"></p>
   <p th:text="${test}"></p>
 </body>
 </html>
