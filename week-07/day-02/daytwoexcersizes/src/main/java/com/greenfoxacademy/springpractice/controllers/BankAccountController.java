@@ -9,13 +9,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class BankAccountController {
 
-  BankAccount newAccount;
+  BankAccount newAccount1;
+  BankAccount newAccount2;
   ArrayList<BankAccount> accounts = new ArrayList<>();
 
   @RequestMapping("/Excersize1")
   public String initializeBankAccount(Model model) {
-    newAccount = new BankAccount("Simba", "lion", "2000");
-    accounts.add(newAccount);
+    newAccount1 = new BankAccount("Simba", "lion", "2000");
+    newAccount2 = new BankAccount("Scar", "lion", "1000");
+    accounts.add(newAccount1);
+    accounts.add(newAccount2);
     model.addAttribute("accounts", accounts);
     return "showFields";
   }
