@@ -13,6 +13,12 @@
   <div th:text="'Name: ' + ${element.getName()}" th:if="${!element.isKing()}"/>
   <div th:text="'Animal Type: ' + ${element.getAnimalType()}"/>
   <div th:text="'Balance: ' + ${#numbers.formatDecimal(element.getBalance(),1,2)} + ' Zebras'"/>
+  <!--<div th:text="${element.isBadGuy()}? 'Bad motherfucker!' : 'Good guy.'"/>-->
+  <div th:switch="${element.isBadGuy()}">
+    <div th:case="true">Bad Motherfucker!</div>
+    <div th:case="false">Good Guy!</div>
+  </div>
+
 </p>
 </body>
 </html>

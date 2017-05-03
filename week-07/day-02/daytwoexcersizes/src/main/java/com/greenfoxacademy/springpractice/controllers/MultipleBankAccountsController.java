@@ -19,12 +19,12 @@ public class MultipleBankAccountsController {
 
   @RequestMapping("/Excersize5")
   public String initializeBankAccount(Model model) {
-    newAccount1 = new BankAccount("Simba", "lion", "2000", false);
-    newAccount2 = new BankAccount("Scar", "lion", "1000",false);
-    newAccount3 = new BankAccount("Mufasa", "lion", "2400", true);
-    newAccount4 = new BankAccount("Rafiki", "mandrill", "1",false);
-    newAccount5 = new BankAccount("Pumba", "warthog", "0",false);
-    newAccount6 = new BankAccount("Timon", "meerkat", "0",false);
+    newAccount1 = new BankAccount("Simba", "lion", "2000", false, false);
+    newAccount2 = new BankAccount("Scar", "lion", "1000",false, true);
+    newAccount3 = new BankAccount("Mufasa", "lion", "2400", true, false);
+    newAccount4 = new BankAccount("Rafiki", "mandrill", "1",false, false);
+    newAccount5 = new BankAccount("Pumba", "warthog", "0",false, false);
+    newAccount6 = new BankAccount("Timon", "meerkat", "0",false, false);
     accounts.add(newAccount1);
     accounts.add(newAccount2);
     accounts.add(newAccount3);
