@@ -11,7 +11,6 @@ public class MultipleBankAccountsController {
 
   ArrayList<BankAccount> accounts = new ArrayList<>();
 
-
   @RequestMapping("/Excersise5")
   public String initializeBankAccount(Model model) {
     accounts.add(new BankAccount("Simba", "lion", 2000, false, false));
