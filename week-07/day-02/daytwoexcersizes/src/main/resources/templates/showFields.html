@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Thymeleaf Exercise #</title>
+  <link rel="stylesheet" th:href="@{/style.css}" />
+  <meta charset="utf-8" />
+</head>
+<body>
+<!--/*@thymesVar id="accounts" type="java"*/-->
+<div th:each="e : ${accounts}">
+  <p th:text="'Name: ' + ${e.name}"/>
+  <p th:text="'Animal Type: ' + ${e.getAnimalType()}"/>
+  <p th:text="'Balance: ' + ${e.getBalance()}"/>
+</div>
+</body>
+</html>
