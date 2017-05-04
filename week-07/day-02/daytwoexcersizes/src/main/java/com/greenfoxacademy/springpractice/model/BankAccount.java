@@ -1,5 +1,6 @@
 package com.greenfoxacademy.springpractice.model;
 
+@SuppressWarnings("unused")
 public class BankAccount {
   String name, animalType;
   int balance;
