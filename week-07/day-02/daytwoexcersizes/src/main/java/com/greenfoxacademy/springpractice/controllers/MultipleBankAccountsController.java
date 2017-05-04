@@ -34,9 +34,8 @@ public class MultipleBankAccountsController {
 
   @RequestMapping("/addAccount")
   public String addAccount(String name, String type, int balance, String guy) {
-    boolean badGuy = false;
-    //int intBalance = Integer.parseInt(balance);
 
+    boolean badGuy = false;
     if (guy.toLowerCase().contains("yes")) {
       badGuy = true;
     }
