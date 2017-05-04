@@ -18,9 +18,9 @@ public class MultipleBankAccountsController {
       accounts.add(new BankAccount("Simba", "lion", 2000, false, false));
       accounts.add(new BankAccount("Scar", "lion", 1400, false, true));
       accounts.add(new BankAccount("Mufasa", "lion", 2400, true, false));
-      accounts.add(new BankAccount("Rafiki", "mandrill", 1, false, false));
-      accounts.add(new BankAccount("Pumba", "warthog", 0, false, false));
-      accounts.add(new BankAccount("Timon", "meerkat", 0, false, false));
+      //accounts.add(new BankAccount("Rafiki", "mandrill", 1, false, false));
+      //accounts.add(new BankAccount("Pumba", "warthog", 0, false, false));
+      //accounts.add(new BankAccount("Timon", "meerkat", 0, false, false));
     }
     model.addAttribute("accounts", accounts);
     return "showBankAccount";
@@ -33,9 +33,9 @@ public class MultipleBankAccountsController {
   }
 
   @RequestMapping("/addAccount")
-  public String addAccount(String name, String type, String balance, String guy) {
+  public String addAccount(String name, String type, int balance, String guy) {
     boolean badGuy = false;
-    int intBalance = Integer.parseInt(balance);
+    //int intBalance = Integer.parseInt(balance);
 
     if (guy.toLowerCase().contains("yes")) {
       badGuy = true;
@@ -44,7 +44,7 @@ public class MultipleBankAccountsController {
       badGuy = false;
     }
 
-    accounts.add(new BankAccount(name, type, intBalance, false, badGuy));
+    accounts.add(new BankAccount(name, type, balance, false, badGuy));
     return "redirect:/Excersise5";
   }
 }
