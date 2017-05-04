@@ -1,52 +1,51 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head>
-  <title>Thymeleaf Exercise #</title>
-  <link rel="stylesheet" th:href="@{/style.css}" />
-  <meta charset="utf-8" />
-</head>
-<body>
-<!--/*@thymesVar id="accounts" type="java"*/-->
-<p th:each="element, iterStat : ${accounts}" th:with="index=${iterStat.index}">
-  <div th:text="'Account ID: ' + ${index}" th:style="'font-weight: bold'"/>
-  <div th:text="'Name: ' + ${element.getName()} + ' (current ruling king)'"  th:if="${element.isKing()}" th:style="'color: #DAA520; font-weight: bold'"/>
-  <div th:text="'Name: ' + ${element.getName()}" th:if="${!element.isKing()}"/>
-  <div th:text="'Animal Type: ' + ${element.getAnimalType()}"/>
-  <div th:text="'Balance: ' + ${#numbers.formatDecimal(element.getBalance(),1,2)} + ' Zebras'"/>
-  <!--<div th:text="${element.isBadGuy()}? 'Bad Motherf@#ker!' : 'Good guy.'"/>-->
-  <div th:switch="${element.isBadGuy()}">
-    <div th:case="true">Bad Motherf@#ker!</div>
-    <div th:case="false">Good Guy!</div>
-  </div>
-  <form action="/addZebras">
-    <input type="hidden" name="index" th:value="${index}"/>
-    <input type="submit" value="Add 10 zebras to balance"/>
-  </form>
-</p>
-<p>
-<form action="/addAccount">
-  <div>
-  Add new account:
-  </div>
-  <div>
-  <input type="text" name="name" value="Name"/>
-  </div>
-  <div>
-  <input type="text" name="type" value="Type"/>
-  </div>
-  <div>
-  <input type="number" name="balance" value="0"/>
-  </div>
-  <div>
-  <input type="text" name="guy" value="Is he a bad guy? yes/no"/>
-  </div>
-  <div>
-  <input type="reset" name="Reset fields"/>
-  </div>
-  <div>
-  <input type="submit" value="Add new account"/>
-  </div>
-</form>
-</p>
-</body>
+  <head>
+    <title>Thymeleaf Exercise #</title>
+    <link rel="stylesheet" th:href="@{/style.css}" />
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <!--/*@thymesVar id="accounts" type="java"*/-->
+    <p th:each="element : ${accounts}" th:with="index=${elementStat.index}">
+      <div th:text="'Account ID: ' + ${index}" th:style="'font-weight: bold'"/>
+      <div th:text="'Name: ' + ${element.getName()} + ' (current ruling king)'"  th:if="${element.isKing()}" th:style="'color: #DAA520; font-weight: bold'"/>
+      <div th:text="'Name: ' + ${element.getName()}" th:if="${!element.isKing()}"/>
+      <div th:text="'Animal Type: ' + ${element.getAnimalType()}"/>
+      <div th:text="'Balance: ' + ${#numbers.formatDecimal(element.getBalance(),1,2)} + ' Zebras'"/>
+      <div th:switch="${element.isBadGuy()}">
+        <div th:case="true">Bad Motherf@#ker!</div>
+        <div th:case="false">Good Guy!</div>
+      </div>
+      <form action="/addZebras">
+        <input type="hidden" name="index" th:value="${index}"/>
+        <input type="submit" value="Add 10 zebras to balance"/>
+      </form>
+    </p>
+    <p>
+      <form action="/addAccount">
+        <div>
+        Add new account:
+        </div>
+        <div>
+        <input type="text" name="name" value="Name"/>
+        </div>
+        <div>
+        <input type="text" name="type" value="Type"/>
+        </div>
+        <div>
+        <input type="number" name="balance" value="0"/>
+        </div>
+        <div>
+        <input type="text" name="guy" value="Is he a bad guy? yes/no"/>
+        </div>
+        <div>
+        <input type="reset" name="Reset fields"/>
+        </div>
+        <div>
+        <input type="submit" value="Add new account"/>
+        </div>
+      </form>
+    </p>
+  </body>
 </html>
