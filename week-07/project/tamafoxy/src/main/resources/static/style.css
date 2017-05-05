@@ -1,0 +1,91 @@
+body {
+  color: darkgreen;
+  font-family: 'Roboto', sans-serif;
+  background-color: darkcyan;
+}
+
+.left {
+  width: 200px;
+  height: 620px;
+  margin-top: 50px;
+  margin-left: 400px;
+  border-radius: 10px;
+  background-color: skyblue;
+  float: left;
+}
+
+.right {
+  width: 400px;
+  height: 620px;
+  margin-top: 50px;
+  margin-right: 400px;
+  border-radius: 10px;
+  background-color: skyblue;
+  float: right;
+}
+
+.button {
+  width: 120px;
+  height: auto;
+  margin: 10px 5px 10px 0px;
+  padding-left: 0px;
+  text-align: center;
+  color: darkgreen;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: ghostwhite;
+  box-shadow: 3px 3px 3px royalblue;
+}
+
+.menu {
+  font-weight: bold;
+  width: 150px;
+  height: auto;
+  margin: 20px 0px 5px 22px;
+  text-align: center;
+  color: darkgreen;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: ghostwhite;
+  box-shadow: 3px 3px 3px royalblue;
+}
+
+.foxImage {
+  padding-left: 100px;
+}
+
+p, h3 {
+  text-align: center;
+}
+
+.tricks {
+  margin-left: 100px;
+}
+
+.right, .left {
+  box-shadow: 10px 10px 5px royalblue;
+}
+
+.button:hover, .buttontop:hover{
+  background-color: lightgray;
+  margin-top: -.5px;
+  margin-left: -1px;
+}
+
+.setnutrition, .settrick {
+  margin-left: 40px;
+  margin-top: 20px;
+}
+
+.listcurrenttricks, .listactions {
+  margin-top: 20px;
+  margin-left: 40px;
+}
+
+.managenutrition {
+  margin-left: 40px;
+}
+
+.actions {
+  margin-right: 40px;
+}
