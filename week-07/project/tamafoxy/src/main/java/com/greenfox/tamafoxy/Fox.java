@@ -8,12 +8,11 @@ public class Fox {
   ArrayList<String> actionHistory;
 
   public Fox() {
-    name = "Foxy";
+    name = "Foxy Cent";
     favouriteFood = "Hamburgers";
     favouriteDrink = "Mango IceTea";
     tricks = new ArrayList<>();
     tricks.add("Code in Java");
-    tricks.add("Eat Hamburgers");
     actionHistory = new ArrayList<>();
   }
 
@@ -65,7 +64,7 @@ public class Fox {
     return isEmpty;
   }
 
-  public String action() {
+  public String recentAction() {
     String status = "default";
     for (int i=0; i < tricks.size(); i++) {
       if (tricks.get(0).toLowerCase().equals("play the drums")) {
@@ -75,6 +74,11 @@ public class Fox {
     for (int i=0; i < tricks.size(); i++) {
       if (tricks.get(0).toLowerCase().equals("play the guitar")) {
         status = "guitar";
+      }
+    }
+    for (int i=0; i < tricks.size(); i++) {
+      if (tricks.get(0).toLowerCase().equals("be a gangsta")) {
+        status = "pimp";
       }
     }
     return status;

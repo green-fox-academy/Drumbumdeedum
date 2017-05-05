@@ -2,12 +2,24 @@ body {
   color: darkgreen;
   font-family: 'Roboto', sans-serif;
   background-color: darkcyan;
+  margin-top: 50px;
+}
+
+.top {
+  width: 590px;
+  height: 75px;
+  margin-top: 40px;
+  margin-left: 420px;
+  border-radius: 10px;
+  background-color: skyblue;
+  text-align: center;
+  padding-top: 1px;
 }
 
 .left {
   width: 200px;
   height: 620px;
-  margin-top: 50px;
+  margin-top: 20px;
   margin-left: 400px;
   border-radius: 10px;
   background-color: skyblue;
@@ -17,7 +29,7 @@ body {
 .right {
   width: 400px;
   height: 620px;
-  margin-top: 50px;
+  margin-top: 20px;
   margin-right: 400px;
   border-radius: 10px;
   background-color: skyblue;
@@ -62,7 +74,7 @@ p, h3 {
   margin-left: 100px;
 }
 
-.right, .left {
+.right, .left, .top {
   box-shadow: 10px 10px 5px royalblue;
 }
 
@@ -88,4 +100,8 @@ p, h3 {
 
 .actions {
   margin-right: 40px;
+}
+
+.image {
+  margin-top: 20px;
 }
