@@ -9,6 +9,7 @@
   </head>
 
   <body>
+
     <div class="top">
       <h1>WELCOME TO PIMP MY FOX!</h1>
     </div>
@@ -26,15 +27,11 @@
     <div class="right">
       <h2 class="managenutrition">Manage nutrition</h2>
       <form class="setnutrition" action="/setnutrition">
-        <div>
-          Set favourite food here:
-        </div>
+        <div> Set favourite food here: </div>
         <div>
           <input type="search" name="food" th:value="${foxy.getFavouriteFood()}"/> (food)
         </div>
-        <div>
-          Set favourite drink here:
-        </div>
+        <div> Set favourite drink here: </div>
         <div>
           <input type="search" name="drink" th:value="${foxy.getFavouriteDrink()}"/> (drink)
         </div>
@@ -43,5 +40,6 @@
         </div>
       </form>
     </div>
+
   </body>
 </html>
