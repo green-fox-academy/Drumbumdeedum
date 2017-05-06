@@ -36,6 +36,19 @@ body {
   margin: 20px 0px 0px 40px;
 }
 
+.menu {
+  font-weight: bold;
+  width: 150px;
+  height: auto;
+  margin: 20px 0px 5px 22px;
+  text-align: center;
+  color: darkgreen;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: ghostwhite;
+  box-shadow: 3px 3px 3px royalblue;
+}
+
 .button {
   width: 120px;
   height: auto;
@@ -48,17 +61,10 @@ body {
   box-shadow: 3px 3px 3px royalblue;
 }
 
-.menu {
-  font-weight: bold;
-  width: 150px;
-  height: auto;
-  margin: 20px 0px 5px 22px;
-  text-align: center;
-  color: darkgreen;
-  border: 1px solid black;
-  border-radius: 10px;
-  background-color: ghostwhite;
-  box-shadow: 3px 3px 3px royalblue;
+.button:hover, .buttontop:hover{
+  background-color: lightgray;
+  margin-top: -.5px;
+  margin-left: -1px;
 }
 
 .foxImage {
@@ -73,11 +79,6 @@ p, h3 {
   margin-left: 100px;
 }
 
-.button:hover, .buttontop:hover{
-  background-color: lightgray;
-  margin-top: -.5px;
-  margin-left: -1px;
-}
 
 .setnutrition, .settrick, .listcurrenttricks, .listactions, .managenutrition {
   margin-top: 20px;
