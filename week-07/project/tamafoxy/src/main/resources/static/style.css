@@ -5,42 +5,41 @@ body {
   margin-top: 50px;
 }
 
+
+.top, .left, .right {
+  border-radius: 10px;
+  background-color: skyblue;
+  box-shadow: 10px 10px 5px royalblue;
+}
+
+.left, .right {
+  height: 580px;
+  float: left;
+}
+
 .top {
   width: 590px;
   height: 75px;
   margin-top: 40px;
   margin-left: 420px;
-  border-radius: 10px;
-  background-color: skyblue;
   text-align: center;
   padding-top: 1px;
 }
 
 .left {
   width: 200px;
-  height: 620px;
-  margin-top: 20px;
-  margin-left: 400px;
-  border-radius: 10px;
-  background-color: skyblue;
-  float: left;
+  margin: 20px 0px 0px 400px;
 }
 
 .right {
   width: 400px;
-  height: 620px;
-  margin-top: 20px;
-  margin-right: 200px;
-  border-radius: 10px;
-  background-color: skyblue;
-  float: right;
+  margin: 20px 0px 0px 40px;
 }
 
 .button {
   width: 120px;
   height: auto;
   margin: 10px 5px 10px 0px;
-  padding-left: 0px;
   text-align: center;
   color: darkgreen;
   border: 1px solid black;
@@ -74,27 +73,14 @@ p, h3 {
   margin-left: 100px;
 }
 
-.right, .left, .top {
-  box-shadow: 10px 10px 5px royalblue;
-}
-
 .button:hover, .buttontop:hover{
   background-color: lightgray;
   margin-top: -.5px;
   margin-left: -1px;
 }
 
-.setnutrition, .settrick {
-  margin-left: 40px;
+.setnutrition, .settrick, .listcurrenttricks, .listactions, .managenutrition {
   margin-top: 20px;
-}
-
-.listcurrenttricks, .listactions {
-  margin-top: 20px;
-  margin-left: 40px;
-}
-
-.managenutrition {
   margin-left: 40px;
 }
 
