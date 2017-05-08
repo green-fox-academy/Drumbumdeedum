@@ -29,16 +29,19 @@
         <h2>Manage tricks</h2>
         <div>Add new trick:</div>
         <div>
-          <input type="search" name="trick"/> (insert trick)
-        </div>
-        <div>
-          <input type="submit" value="Set"/>
+          <select name="trick">
+            <option th:each="trick : ${allTricks.getTrickList()}"
+                    th:value="${trick.getTrickName()}"
+                    th:text="${trick.getTrickName()}">
+            </option>
+            <input type="submit" value="Learn trick"/>
+          </select>
         </div>
       </form>
       <div class="listcurrenttricks">
         <h4>Current tricks:</h4>
-        <ul class="currenttricks" th:each="trick : ${foxy.getTricks()}">
-          <li style="list-style: none" th:text="${trick}"/>
+        <ul class="currenttricks" th:each="trick : ${foxy.getFoxyTricks()}">
+          <li style="list-style: none" th:text="${trick.getTrickName()}"/>
         </ul>
       </div>
     </div>

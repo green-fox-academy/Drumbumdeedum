@@ -25,19 +25,17 @@
     </div>
 
     <div class="right">
-      <div class="image" th:switch="${foxy.recentAction()}">
-        <img class="foxImage" th:case="default" src="images/nobackgroundfox.png" alt="There should be a fox here..."/>
-        <img class="foxImage" th:case="drum" src="images/nobackgroundfoxdrums.png" alt="There should be a fox here..."/>
-        <img class="foxImage" th:case="guitar" src="images/nobackgroundfoxguitar.png" alt="There should be a fox here..."/>
-        <img class="foxImage" th:case="pimp" src="images/nobackgroundfoxpimp.png" alt="There should be a fox here..."/>
+      <div class="image">
+        <img class="foxImage" th:src="${foxy.getImage()}" alt="There should be a fox here..."/>
       </div>
       <p th:text="'This is ' + ${foxy.getName()} + '.'"/>
       <p th:text="'Currently living on ' + ${foxy.getFavouriteFood()} + ' and '+ ${foxy.getFavouriteDrink()} + '.'"/>
       <p th:text="'He knows ' + ${foxy.getNumberOfTricks()} + ' trick(s).'"/>
       <h3> Known tricks: </h3>
-      <ul class="tricks" th:each="trick : ${foxy.getTricks()}">
-        <li style="list-style: none" th:text="${trick}"/>
-      </ul>
+      <form class="tricks" action="/setimage" th:each="trick : ${foxy.getFoxyTricks()}">
+        <input type="submit" class="submittrick" th:value="${trick.getTrickName()}"/>
+        <input type="hidden" name="image" th:value="${trick.getImageName()}"/>
+      </form>
     </div>
 
   </body>

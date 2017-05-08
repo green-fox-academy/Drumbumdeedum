@@ -76,7 +76,20 @@ p, h3 {
 }
 
 .tricks {
-  margin-left: 100px;
+  width: 90px;
+  height: auto;
+  margin: 10px 5px 10px 153px;
+  text-align: center;
+  color: darkgreen;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: ghostwhite;
+  box-shadow: 3px 3px 3px royalblue;
+}
+
+.tricks:hover, .buttontop:hover {
+  margin-top: -.5px;
+  margin-left: 151px;
 }
 
 
@@ -92,3 +105,16 @@ p, h3 {
 .image {
   margin-top: 20px;
 }
+
+.submittrick {
+  padding:0px;
+  background:white;
+  margin-bottom: 3px;
+  border:0 none;
+  cursor:pointer;
+  -webkit-border-radius: 0px;
+  border-radius: 0px;
+  color: darkgreen;
+  font-family: 'Roboto', sans-serif;
+}
+
