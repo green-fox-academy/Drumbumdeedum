@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+  <head>
+    <title>My To-Dos</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet"/>
+    <meta charset="utf-8" />
+  </head>
+
+  <body>
+    <h1>To-Dos for today:</h1>
+      <ul>
+        <li th:each="todo : ${todos}" th:text="${todo.getTitle()}">new todo</li>
+      </ul>
+  </body>
+
+</html>
