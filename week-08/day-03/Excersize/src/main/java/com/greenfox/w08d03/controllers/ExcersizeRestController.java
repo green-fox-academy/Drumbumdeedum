@@ -24,6 +24,12 @@ public class ExcersizeRestController {
   @Autowired
   DoUntil doUntil;
 
+  @Autowired
+  ArrayHandler arrayHandler;
+
+  @Autowired
+  ArrayHandlerResult arrayHandlerResult;
+
   @ExceptionHandler(MissingServletRequestParameterException.class)
   public ErrorHandler handler(MissingServletRequestParameterException e) {
     if (e.getParameterName().equals("input")) {
@@ -82,5 +88,32 @@ public class ExcersizeRestController {
       doUntil.setResult(result);
     }
     return doUntil;
+  }
+
+  @PostMapping("/arrays")
+  public ArrayHandlerResult arrayHandler(@RequestBody ArrayHandler handler) {
+
+    if(handler.getWhat().equals("sum")) {
+      int result = 0;
+      for (int i=0; i < handler.getNumbers().length ; i++) {
+        result += handler.getNumbersOfArray(i);
+      }
+      arrayHandlerResult.setResult(result);
+    }
+    if(handler.getWhat().equals("multiply")) {
+      int result = 1;
+      for (int i=0; i < handler.getNumbers().length ; i++) {
+        result *= handler.getNumbersOfArray(i);
+      }
+      arrayHandlerResult.setResult(result);
+    }
+    if(handler.getWhat().equals("double")) {
+      int result = 0;
+      for (int i=0; i < handler.getNumbers().length ; i++) {
+        handler.getNumbers()[i] = handler.getNumbersOfArray(i*2);
+      }
+      arrayHandlerResult.setResult(result);
+    }
+  return arrayHandlerResult;
   }
 }
