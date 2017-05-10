@@ -1,19 +1,10 @@
 package com.greenfox.w08d03.controllers;
 
-import com.greenfox.w08d03.models.Append;
-import com.greenfox.w08d03.models.DoUntil;
-import com.greenfox.w08d03.models.Doubling;
-import com.greenfox.w08d03.models.ErrorHandler;
-import com.greenfox.w08d03.models.Greeter;
+import com.greenfox.w08d03.models.*;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.converter.HttpMessageNotReadableException;
 import org.springframework.web.bind.MissingServletRequestParameterException;
-import org.springframework.web.bind.annotation.ExceptionHandler;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class ExcersizeRestController {
@@ -47,6 +38,12 @@ public class ExcersizeRestController {
     return handler;
   }
 
+  @ExceptionHandler(HttpMessageNotReadableException.class)
+  public ErrorHandler handler2(){
+    handler.setError("Please provide a number!");
+    return handler;
+  }
+
   @GetMapping("/doubling")
   public Doubling doubled(@RequestParam() int input) {
     doubled.setReceived(input);
@@ -67,8 +64,23 @@ public class ExcersizeRestController {
   }
 
   @PostMapping("/dountil/{what}")
-  public DoUntil doUntil(@PathVariable() String what, @RequestBody int number) {
+  public DoUntil doUntil(@PathVariable() String what, @RequestBody Until until) {
 
+    if (what.equals("sum")){
+      int result = 0;
+      for (int i=0; i <= until.getUntil(); i++) {
+        result += i;
+      }
+      doUntil.setResult(result);
+    }
+
+    if (what.equals("factor")){
+      int result = 1;
+      for (int i=1; i <= until.getUntil(); i++) {
+        result *= i;
+      }
+      doUntil.setResult(result);
+    }
     return doUntil;
   }
 }
