@@ -10,11 +10,18 @@ import javax.persistence.Id;
 public class Post {
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO)
-  long id;
-  String title;
-  String href;
-  Timestamp timestamp = new Timestamp(System.currentTimeMillis()/1000);
-  long score = 0;
+  private long id;
+  private String title;
+  private String href;
+  private Timestamp timestamp;
+  private int score;
+
+  public Post() {
+    this.title = "";
+    this.href= "";
+    this.timestamp = new Timestamp(System.currentTimeMillis());
+    this.score = 0;
+  }
 
   public long getId() {
     return id;
@@ -48,11 +55,11 @@ public class Post {
     this.timestamp = timestamp;
   }
 
-  public long getScore() {
+  public int getScore() {
     return score;
   }
 
-  public void setScore(long score) {
+  public void setScore(int score) {
     this.score = score;
   }
 }
