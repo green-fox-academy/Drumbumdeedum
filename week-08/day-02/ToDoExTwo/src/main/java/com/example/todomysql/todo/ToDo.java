@@ -10,15 +10,11 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "todos")
 public class ToDo {
-  @Column
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO)
   private long id;
-  @Column
   private String title;
-  @Column
   private boolean isUrgent = false;
-  @Column
   private boolean isDone = false;
 
   public ToDo() {

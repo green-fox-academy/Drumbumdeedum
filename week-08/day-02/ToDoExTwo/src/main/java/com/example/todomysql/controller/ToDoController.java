@@ -13,6 +13,12 @@ public class ToDoController {
   @Autowired
   Repository repository;
 
+  @RequestMapping(value = "/")
+  public String home(Model model) {
+    model.addAttribute("todos", repository.findAll());
+    return "todo";
+  }
+
   @RequestMapping(value = "/listall")
   public String list(Model model) {
     model.addAttribute("todos", repository.findAll());
@@ -44,6 +50,7 @@ public class ToDoController {
   @GetMapping("/{id}/edit")
   public String editElement(@PathVariable long id, Model model) {
     model.addAttribute("todo", repository.findOne(id));
+    model.addAttribute("todos", repository.findAll());
     return "edit";
   }
 

@@ -1,5 +1,8 @@
 body {
   font-family: 'Roboto', sans-serif;
+  float: left;
+  margin-left: 400px;
+  background-color: lightgray;
 }
 
 table, th, td {
@@ -12,7 +15,12 @@ table {
 }
 
 h1 {
-  margin: 30px 0px 30px 180px;
+  margin: 30px 0px 30px 150px;
+  background-color: cornflowerblue;
+  width: 250px;
+  padding: 10px;
+  border: 3px solid black;
+  border-radius: 10px;
 }
 
 .table {
@@ -91,6 +99,15 @@ h1 {
   padding: 0px 5px 0px 5px;
 }
 
-.back {
-  margin-top: 20px;
+.left {
+  float: left;
+}
+
+.right {
+  float: left;
+  margin-top: 100px;
+}
+
+h4 {
+  margin-bottom: 0;
 }
