@@ -16,7 +16,6 @@
         <th class="texttitle"> To-Do </th>
         <th class="booleancolumn"> It it done yet? </th>
         <th class="booleancolumn"> Is it urgent? </th>
-        <th class="removecolumn">Remove</th>
       </tr>
       <tr th:each="todo : ${todos}">
         <th class="idcolumn" th:text="${todo.getId()}"/>
@@ -27,6 +26,7 @@
         <th class="booleancolumnfalse" th:if="${!todo.isDone()} and ${todo.isUrgent()}">URGENT!</th>
         <th class="booleancolumntrue" th:if="${!todo.isDone()} and ${!todo.isUrgent()}">Nope, chill!</th>
         <th><a class="delete" style="text-decoration: none" th:href="${'/' + todo.getId() + '/delete'}">X</a></th>
+        <th><a class="edit" style="text-decoration: none" th:href="${'/' + todo.getId() + '/edit'}">&#9998;</a></th>
       </tr>
     </table>
     <a class="switch" style="text-decoration: none" href="/listundone">Show undone</a>

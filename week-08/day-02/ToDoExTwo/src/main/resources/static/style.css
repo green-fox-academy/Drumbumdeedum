@@ -12,7 +12,7 @@ table {
 }
 
 h1 {
-  margin: 30px 0px 30px 250px;
+  margin: 30px 0px 30px 180px;
 }
 
 .table {
@@ -43,10 +43,10 @@ h1 {
   background-color: red;
 }
 
-.textcolumn {
+.textcolumn, .edit, .delete {
   font-weight: normal;
   background-color: beige;
-  width: auto;
+  width: 100%;
 }
 
 .texttitle {
@@ -91,3 +91,6 @@ h1 {
   padding: 0px 5px 0px 5px;
 }
 
+.back {
+  margin-top: 20px;
+}

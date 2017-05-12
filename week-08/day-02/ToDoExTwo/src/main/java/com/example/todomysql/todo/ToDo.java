@@ -1,5 +1,6 @@
 package com.example.todomysql.todo;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -9,11 +10,15 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "todos")
 public class ToDo {
+  @Column
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO)
   private long id;
+  @Column
   private String title;
+  @Column
   private boolean isUrgent = false;
+  @Column
   private boolean isDone = false;
 
   public ToDo() {
@@ -22,6 +27,22 @@ public class ToDo {
 
   public ToDo(String title) {
     this.title = title;
+  }
+
+  public void setTitle(String title) {
+    this.title = title;
+  }
+
+  public void setDone(boolean done) {
+    isDone = done;
+  }
+
+  public void setUrgent(boolean urgent) {
+    isUrgent = urgent;
+  }
+
+  public void setId(long id) {
+    this.id = id;
   }
 
   public String getTitle() {

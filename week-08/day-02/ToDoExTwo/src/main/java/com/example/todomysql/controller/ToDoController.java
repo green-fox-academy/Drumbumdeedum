@@ -5,11 +5,7 @@ import com.example.todomysql.todo.ToDo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 @Controller
 public class ToDoController {
@@ -29,29 +25,36 @@ public class ToDoController {
     return "todoundone";
   }
 
-  @RequestMapping(value = "/", method = RequestMethod.GET)
-  public String listToDo(@RequestParam(required = false) String isActive, Model model) {
-    if (isActive != null) {
-      model.addAttribute("todos", repository.findByIsDoneEquals(Boolean.parseBoolean(isActive)));
-    } else {
-      model.addAttribute("todos", repository.findAll());
-    }
-    return "todo";
-  }
-
   @RequestMapping(value = "/addtodo")
   public  String addtodo(Model model, String newTodo) {
     if (!newTodo.equals("")) {
       repository.save(new ToDo(newTodo));
     }
     model.addAttribute("todos", repository.findAll());
-    return "todo";
+    return "redirect:/listall/";
   }
 
   @GetMapping("/{id}/delete")
   public String delete(@PathVariable long id, Model model) {
     repository.delete(id);
     model.addAttribute("todos", repository.findAll());
-    return"todo";
+    return"redirect:/listall/";
+  }
+
+  @GetMapping("/{id}/edit")
+  public String editElement(@PathVariable long id, Model model) {
+    model.addAttribute("todo", repository.findOne(id));
+    return "edit";
+  }
+
+  @PostMapping("/save")
+  public String save(Model model, @RequestParam long id, String title, boolean isDone, boolean isUrgent) {
+    model.addAttribute("todo", repository.findOne(id));
+    ToDo toDo = repository.findOne(id);
+    toDo.setTitle(title);
+    toDo.setDone(isDone);
+    toDo.setUrgent(isUrgent);
+    repository.save(toDo);
+    return("redirect:/listall/");
   }
 }
