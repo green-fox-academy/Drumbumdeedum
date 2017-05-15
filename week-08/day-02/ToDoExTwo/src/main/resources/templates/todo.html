@@ -13,10 +13,10 @@
       <table class="table">
         <h1>To Dos for today:</h1>
         <tr>
-          <th class="idcolumn"> ID </th>
-          <th class="texttitle"> To Do </th>
-          <th class="booleancolumn"> It it done yet? </th>
-          <th class="booleancolumn"> Is it urgent? </th>
+          <th class="idcolumn">ID</th>
+          <th class="texttitle">To Do</th>
+          <th class="booleancolumn">It it done yet?</th>
+          <th class="booleancolumn">Is it urgent?</th>
         </tr>
         <tr th:each="todo : ${todos}">
           <th class="idcolumn" th:text="${todo.getId()}"/>

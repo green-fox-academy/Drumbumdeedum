@@ -106,9 +106,14 @@ h1 {
 
 .right {
   float: left;
-  margin-top: 100px;
+  margin-top: 146px;
+  background-color: cornflowerblue;
+  padding: 10px;
+  border: 3px solid black;
+  border-radius: 10px;
 }
 
 h4 {
-  margin-bottom: 0;
+  margin: 0;
+  padding: 0;
 }
