@@ -36,12 +36,11 @@ public class GuardianControllerTest {
 
   @Test
   public void TestWithString() throws Exception {
-    String message = "Are you really groot?";
     mockMvc.perform(get("/groot")
-        .param("message", message))
+        .param("message", "Are you really groot?"))
         .andExpect(status().isOk())
         .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8))
-        .andExpect(jsonPath("$.received", is(message)))
+        .andExpect(jsonPath("$.received", is("Are you really groot?")))
         .andExpect(jsonPath("$.translated", is("I am Groot!")));
   }
 
@@ -83,5 +82,124 @@ public class GuardianControllerTest {
         .andExpect(jsonPath("$.caliber50", is(0)))
         .andExpect(jsonPath("$.shipstatus", is("empty")))
         .andExpect(jsonPath("$.ready", is(false)));
+  }
+
+  @Test
+  public void TestRocketCargoEmpty() throws Exception {
+    mockMvc.perform(get("/rocket/fill")
+        .param("caliber", ".25")
+        .param("amount", "0"))
+        .andExpect(status().isOk())
+        .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8))
+        .andExpect(jsonPath("$.received", is(".25")))
+        .andExpect(jsonPath("$.amount", is(0)))
+        .andExpect(jsonPath("$.shipstatus", is("empty")))
+        .andExpect(jsonPath("$.ready", is(false)));
+  }
+
+  @Test
+  public void TestRocketCargoLoaded() throws Exception {
+    mockMvc.perform(get("/rocket/fill")
+        .param("caliber", ".25")
+        .param("amount", "5000"))
+        .andExpect(status().isOk())
+        .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8))
+        .andExpect(jsonPath("$.received", is(".25")))
+        .andExpect(jsonPath("$.amount", is(5000)))
+        .andExpect(jsonPath("$.shipstatus", is("40%")))
+        .andExpect(jsonPath("$.ready", is(false)));
+  }
+
+  @Test
+  public void TestRocketCargoFull() throws Exception {
+    mockMvc.perform(get("/rocket/fill")
+        .param("caliber", ".25")
+        .param("amount", "12500"))
+        .andExpect(status().isOk())
+        .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8))
+        .andExpect(jsonPath("$.received", is(".25")))
+        .andExpect(jsonPath("$.amount", is(12500)))
+        .andExpect(jsonPath("$.shipstatus", is("full")))
+        .andExpect(jsonPath("$.ready", is(true)));
+  }
+
+  @Test
+  public void TestRocketCargoOverloaded() throws Exception {
+    mockMvc.perform(get("/rocket/fill")
+        .param("caliber", ".25")
+        .param("amount", "13000"))
+        .andExpect(status().isOk())
+        .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8))
+        .andExpect(jsonPath("$.received", is(".25")))
+        .andExpect(jsonPath("$.amount", is(13000)))
+        .andExpect(jsonPath("$.shipstatus", is("overloaded")))
+        .andExpect(jsonPath("$.ready", is(false)));
+  }
+
+  @Test
+  public void TestRocketWithMissingParameters() throws Exception {
+    mockMvc.perform(get("/rocket/fill"))
+        .andExpect(status().isBadRequest())
+        .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8))
+        .andExpect(jsonPath("$.error", is("Please enter caliber and amount parameters!")));
+  }
+
+  @Test public void TestDraxListApple() throws Exception {
+    mockMvc.perform(get("/drax/addfood")
+        .param("name", "apple")
+        .param("amount", "10")
+        .param("calories", "10"))
+        .andExpect(status().isOk())
+        .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8))
+        .andExpect(jsonPath("$.foodList[0].name", is("apple")))
+        .andExpect(jsonPath("$.foodList[0].amount", is(10)))
+        .andExpect(jsonPath("$.foodList[0].calories", is(10)));
+  }
+
+  @Test public void TestDraxRemoveIndexTwo() throws Exception {
+    mockMvc.perform(get("/drax/addfood")
+        .param("name", "apple")
+        .param("amount", "10")
+        .param("calories", "10"))
+        .andExpect(status().isOk())
+        .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8))
+        .andExpect(jsonPath("$.foodList[0].name", is("apple")))
+        .andExpect(jsonPath("$.foodList[0].amount", is(10)))
+        .andExpect(jsonPath("$.foodList[0].calories", is(10)))
+        .andExpect(jsonPath("$.foodList.length()",is(1)));
+    mockMvc.perform(get("/drax/addfood")
+        .param("name", "pizza")
+        .param("amount", "10")
+        .param("calories", "4000"))
+        .andExpect(status().isOk())
+        .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8))
+        .andExpect(jsonPath("$.foodList[1].name", is("pizza")))
+        .andExpect(jsonPath("$.foodList[1].amount", is(10)))
+        .andExpect(jsonPath("$.foodList[1].calories", is(4000)))
+        .andExpect(jsonPath("$.foodList.length()",is(2)));
+    /*mockMvc.perform(get("drax/remove")
+        .param("index", "1"))
+        .andExpect(status().isOk())
+        .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8))
+        .andExpect(jsonPath("$.foodList.length()",is(1)));*/
+  }
+
+  @Test public void TestDraxIncreaseAmount() throws Exception {
+    mockMvc.perform(get("/drax/addfood")
+        .param("name", "apple")
+        .param("amount", "10")
+        .param("calories", "10"))
+        .andExpect(status().isOk())
+        .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8))
+        .andExpect(jsonPath("$.foodList[0].name", is("apple")))
+        .andExpect(jsonPath("$.foodList[0].amount", is(10)))
+        .andExpect(jsonPath("$.foodList[0].calories", is(10)));
+    /*mockMvc.perform(get("/drax/increaseamount")
+        .param("index", "20"))
+        .andExpect(status().isOk())
+        .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8))
+        .andExpect(jsonPath("$.foodList[0].name", is("apple")))
+        .andExpect(jsonPath("$.foodList[0].amount", is(20)))
+        .andExpect(jsonPath("$.foodList[0].calories", is(10)));*/
   }
 }

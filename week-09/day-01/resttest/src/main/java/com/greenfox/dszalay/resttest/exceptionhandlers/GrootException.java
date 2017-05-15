@@ -1,4 +1,4 @@
-package com.greenfox.dszalay.resttest.models;
+package com.greenfox.dszalay.resttest.exceptionhandlers;
 
 public class GrootException implements GuardianExceptions {
   public String error;
