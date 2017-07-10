@@ -1,5 +1,4 @@
 /*  13.
-
     Create a function that takes a list of strings and transforms it like:
     ["abc", "ijk", "xyz"]
     becomes:
@@ -21,7 +20,6 @@ public class ExerciseThirteen {
 
   public static List<String> mixLetters(List<String> inputList) {
     List<String> outputList = new ArrayList();
-
     for (int i = 0; i < inputList.size(); i++) {
       String currentWord = inputList.get(i);
       for (int j = 0;  j < currentWord.length(); j++) {
