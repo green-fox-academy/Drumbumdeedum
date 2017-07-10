@@ -13,7 +13,6 @@
     "ckz"
   ]*/
 
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -21,8 +20,10 @@ import java.util.List;
 public class ExerciseThirteen {
 
   public static void main(String[] args) {
-    List<String> exampleList = new ArrayList<>(Arrays.asList("abc", "ijk", "xyz"));
-    System.out.println(mixLetters(exampleList));
+    List<String> exampleList1 = new ArrayList<>(Arrays.asList("abc", "ijk", "xyz"));
+    System.out.println(mixLetters(exampleList1));
+    List<String> exampleList2 = new ArrayList<>(Arrays.asList("abcde", "fghjk", "lmnop", "qrstu", "vwxyz"));
+    System.out.println(mixLetters(exampleList2));
   }
 
   public static List<String> mixLetters(List<String> inputList) {
