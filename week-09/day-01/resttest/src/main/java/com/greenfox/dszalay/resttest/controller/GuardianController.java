@@ -22,7 +22,7 @@ public class GuardianController {
   public GuardianExceptions guardianError(MissingServletRequestParameterException e) {
     if (e.getParameterName().equals("message")) {
       return new GrootException("I am Groot!");
-    } else if (e.getParameterName().equals("distance")) {
+    } else if (e.getParameterName().equals("distance") || e.getParameterName().equals("time")) {
       return new ArrowException("Missing distance or time parameter!");
     } else {
       return new CargoException("Please enter caliber and amount parameters!");

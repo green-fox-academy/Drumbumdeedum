@@ -6,7 +6,14 @@ import org.springframework.stereotype.Component;
 public class Doubling {
   int received;
   int result;
-  String error;
+
+  public Doubling() {
+  }
+
+  public Doubling(int received, int result) {
+    this.received = received;
+    this.result = result;
+  }
 
   public int getReceived() {
     return received;
@@ -22,13 +29,5 @@ public class Doubling {
 
   public void setResult(int result) {
     this.result = result;
-  }
-
-  public String getError() {
-    return error;
-  }
-
-  public void setError(String error) {
-    this.error = error;
   }
 }

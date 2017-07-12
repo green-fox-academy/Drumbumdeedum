@@ -13,7 +13,7 @@ public class ExcersizeRestController {
   ErrorHandler handler;
 
   @Autowired
-  Doubling doubled;
+  Doubling doubling;
 
   @Autowired
   Greeter greeter;
@@ -52,9 +52,9 @@ public class ExcersizeRestController {
 
   @GetMapping("/doubling")
   public Doubling doubled(@RequestParam() int input) {
-    doubled.setReceived(input);
-    doubled.setResult(input*2);
-    return doubled;
+    doubling.setReceived(input);
+    doubling.setResult(input*2);
+    return doubling;
   }
 
   @GetMapping("/greeter")
