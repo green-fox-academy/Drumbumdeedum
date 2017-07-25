@@ -26,7 +26,7 @@ public class PrimeFactor {
     }
   }
 
-  private static ArrayList<Long> generatePrimeNumberFactorList(long max) {
+  public static ArrayList<Long> generatePrimeNumberFactorList(long max) {
     ArrayList<Long> primeNumbers = new ArrayList<>();
     primeNumbers.add(2l);
     long numberToAdd = 3l;
