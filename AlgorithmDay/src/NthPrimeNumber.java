@@ -5,7 +5,7 @@ public class NthPrimeNumber {
     System.out.println(getNthPrime(10001));
   }
 
-  private static boolean isPrime(long num) {
+  public static boolean isPrime(long num) {
     if (num < 2) {
       return false;
     }
