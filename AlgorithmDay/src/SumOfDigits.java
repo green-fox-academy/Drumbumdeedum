@@ -1,8 +1,8 @@
 public class SumOfDigits {
 
   public static void main(String[] args) {
-    System.out.println(sumOfDigits(toThePowerOf(2,1000)));
-    System.out.println(toThePowerOf(2,1000));
+    System.out.println("2 to the power of 10 = " + toThePowerOf(2,10));
+    System.out.println("The sum of the digits is: " + sumOfDigits(toThePowerOf(2,10)));
   }
 
   public static long sumOfDigits(long inputNumber) {
