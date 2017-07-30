@@ -13,7 +13,7 @@ public class SumOfFactorialDigits {
       fact = fact.multiply(BigInteger.valueOf(i));
     return fact;
   }
-  
+
   private static int calcDigits(String s) {
     int sum = 0;
 
