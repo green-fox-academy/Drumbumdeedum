@@ -3,8 +3,8 @@ import java.math.BigInteger;
 public class SumOfFactorialDigits {
 
   public static void main(String[] args) {
-    System.out.println(factorialBigInt(100));
-    System.out.println(calcDigits(factorialBigInt(100).toString()));
+    System.out.println("100! equals: " + factorialBigInt(100));
+    System.out.println("Sum of digits: " + calcDigits(factorialBigInt(100).toString()));
   }
 
   public static BigInteger factorialBigInt(int input) {
@@ -13,7 +13,7 @@ public class SumOfFactorialDigits {
       fact = fact.multiply(BigInteger.valueOf(i));
     return fact;
   }
-
+  
   private static int calcDigits(String s) {
     int sum = 0;
 
