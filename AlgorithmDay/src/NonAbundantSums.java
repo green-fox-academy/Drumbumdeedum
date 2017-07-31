@@ -7,12 +7,11 @@ public class NonAbundantSums {
 
     while (start <= 28123) {
       if (!sumOfTwoAbundantNumbers(start)) {
-        System.out.println(start);
         sum += start;
+        System.out.println(start);
       }
       start++;
     }
-
     System.out.println(sum);
   }
 
