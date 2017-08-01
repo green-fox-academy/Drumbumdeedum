@@ -4,10 +4,21 @@ import java.util.Collections;
 
 public class PermutationsOfInt {
 
-  private static final ArrayList<Integer> possibleNumbers = new ArrayList<>(Arrays.asList(0,1,2,3,4,5,6,7,8,9));
+  private static final ArrayList<Long> possibleNumbers = new ArrayList<>(Arrays.asList(0l,1l,2l,3l,4l,5l,6l,7l,8l,9l));
 
   public static void main(String[] args) {
-    System.out.println(randomNumber());
+
+    ArrayList<Long> allNumbers = new ArrayList<>();
+
+    while (allNumbers.size() < factorial(possibleNumbers.size())) {
+      long valueToAdd = randomNumber();
+      if(!allNumbers.contains(valueToAdd)) {
+        allNumbers.add(valueToAdd);
+        Collections.sort(allNumbers);
+        System.out.println(allNumbers.size());
+      }
+    }
+    System.out.println(allNumbers.get(1000000));
   }
 
   public static long factorial(long input) {
@@ -18,12 +29,12 @@ public class PermutationsOfInt {
     return result;
   }
 
-  public static Integer randomNumber() {
+  public static Long randomNumber() {
     Collections.shuffle(possibleNumbers);
     StringBuilder numberString = new StringBuilder();
     for (int i = 0; i < possibleNumbers.size(); i++) {
       numberString.append(possibleNumbers.get(i));
     }
-    return Integer.valueOf(numberString.toString());
+    return Long.valueOf(numberString.toString());
   }
 }
